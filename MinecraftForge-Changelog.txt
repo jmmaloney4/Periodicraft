@@ -1,0 +1,47 @@
+Changelog:
+
+Build 1.5.1-7.7.1.661
+	lhb
+		Fix for ClassCastException when attempting to fetch Biome types from BiomeDictionary
+		Attempting to fetch the BiomeDictionary types linked to a biome throws a ClassCastException. This fixes that
+	lhb: getBiomesForType will cause the same problem
+
+Build 1.5.1-7.7.1.660
+	cpw
+		Updated FML:
+		MinecraftForge/FML@b3d4ea05ec633fb1898e97febf786f1a3e420986 Fix possible NPE in findItemStack, closes #218
+	cpw
+		Simple block recolouring API: closes #525
+		Fix up documentation on "rotation" API: it is up to the mod to decide interpretation of "rotation" for the mod/block.
+
+Build 1.5.1-7.7.1.659
+	LexManos: Fix return value of EnchantPower hook, closes #518
+	LexManos: Adds a field to the player for maximum health. Player.dat additions are present, getMaxHealth() needs a magic number for spawning. Closes #527
+
+Build 1.5.1-7.7.1.657
+	LexManos: New hook to allow Items to render Helmet overlays like pumpkins do.
+
+Build 1.5.1-7.7.1.656
+	cpw
+		Updated FML:
+		MinecraftForge/FML@394f424185a044afcd6b31f400e731478171dd18 Fix to output versions in crash logs
+		MinecraftForge/FML@8f35adca7a41c280a4b63d4787f042f615966cac Use more expressive language when a version specifier is a simple unbounded above condition
+
+Build 1.5.1-7.7.1.655
+	cpw
+		Updated FML:
+		MinecraftForge/FML@5673c1dd2966536000c2b3f17f85131204c4a291 Add srgname to registerTileEntityWithAlternatives
+		MinecraftForge/FML@7aea09f4ca2f087d59ff6cb0de1c8e3e8b9ea4df Add type info to properly deobfuscate overloaded fields. Fixes #210.
+		MinecraftForge/FML@edffd04ed2e89ece75189f76b92ae47643ec92f8 Add in some caching of the read field descriptions for efficiency
+		MinecraftForge/FML@0daf1a6df4203d97be65a76a46550f6ad22ccc79 Merge branch 'agaricusb-fix-deobf-field'
+		MinecraftForge/FML@ada52078c75fdfa506a4287c112d01d9af961d5a Merge pull request #216 from agaricusb/add-srgname
+
+Build 1.5.1-7.7.1.654
+	jmacwilliams: fixed a bug that prevented proper lava generation near bedrock
+
+Build 1.5.1-7.7.1.653
+	LexManos: Fix AIOOB in crash report stack trimming.
+
+Build 1.5.1-7.7.1.652
+	pahimar: Fix a derp in that we provision the various arrays for a face, even if we are not going to parse data into it. Solves NPEs for when obj models that don't have texture coordinates attempt to render.
+	pahimar: Missed a bit
