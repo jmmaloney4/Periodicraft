@@ -617,7 +617,8 @@ public class Periodicraft {
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.TinDust, 1), new Object[] {Periodicraft.TinNugget});
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.SteelAlloy), new Object[] {Periodicraft.SteelIngot, Periodicraft.AluiminumIngot, Periodicraft.ChromiumIngot, Periodicraft.NickelIngot});
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.VanadiumAlloy), new Object[] {Periodicraft.SteelAlloy, Periodicraft.CopperIngot, Periodicraft.VanadiumIngot});
-        
+        GameRegistry.addShapelessREcipe(new ItemStack(Periodicraft.SteelIngot), new Object[] {Periodicraft.SteelBlock})
+
         GameRegistry.addSmelting(Periodicraft.CopperOre.blockID, CopperIngotStack, 0.5F);
         GameRegistry.addSmelting(Periodicraft.TitaniumOre.blockID, TitaniumIngotStack, 6.0F);
         GameRegistry.addSmelting(Periodicraft.BlueStone.blockID, BlueStoneShardStack, 1.5F);
