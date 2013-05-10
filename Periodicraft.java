@@ -262,10 +262,10 @@ public class Periodicraft {
 	public final static Item MoonRock = new ItemMoonRock(ID.id());
 	public final static Item BlueStoneShard = new ItemBlueStoneShard(ID.id());
 	public final static Item BlueStoneGem = new ItemBlueStoneGem(ID.id());
-	public final static Item TitaniumHelm = new ItemTitaniumArmor(ID.id(), EnumArmorMaterial.TITANIUM, 2, 0, "TitaniumHelm");
-	public final static Item TitaniumChest = new ItemTitaniumArmor(ID.id(), EnumArmorMaterial.TITANIUM, 2, 1, "TitaniumChest");
-	public final static Item TitaniumLegs = new ItemTitaniumArmor(ID.id(), EnumArmorMaterial.TITANIUM, 2, 2, "TitaniumLegs");
-	public final static Item TitaniumBoots = new ItemTitaniumArmor(ID.id(), EnumArmorMaterial.TITANIUM, 2, 3, "TitaniumBoots");
+	public final static Item TitaniumHelm = new ItemTitaniumArmor(ID.id(), EnumPeriodicraftArmorMaterial.TITANIUM, 2, 0, "TitaniumHelm");
+	public final static Item TitaniumChest = new ItemTitaniumArmor(ID.id(), EnumPeriodicraftArmorMaterial.TITANIUM, 2, 1, "TitaniumChest");
+	public final static Item TitaniumLegs = new ItemTitaniumArmor(ID.id(), EnumPeriodicraftArmorMaterial.TITANIUM, 2, 2, "TitaniumLegs");
+	public final static Item TitaniumBoots = new ItemTitaniumArmor(ID.id(), EnumPeriodicraftArmorMaterial.TITANIUM, 2, 3, "TitaniumBoots");
 	public final static Item CopperNugget = new ItemCopperNugget(ID.id());
 	public final static Item CopperDust = new ItemCopperDust(ID.id());
 	public final static Item TinIngot = new ItemTinIngot(ID.id());

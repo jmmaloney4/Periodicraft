@@ -98,6 +98,11 @@ public enum EnumPeriodicraftToolMaterial {
     {
         switch (this)
         {
+        	case WOOD:    return Block.planks.blockID;
+        	case STONE:   return Block.cobblestone.blockID;
+        	case GOLD:    return Item.ingotGold.itemID;
+        	case IRON:    return Item.ingotIron.itemID;
+        	case EMERALD: return Item.diamond.itemID;
         	case TITANIUM: return Periodicraft.TitaniumIngot.itemID;
         	case TUNGSTEN: return Periodicraft.TungstenIngot.itemID;
         	case COPPER: return Periodicraft.CopperIngot.itemID;

@@ -19,6 +19,8 @@ public class PeriodicraftTool extends ItemTool {
 		this.setMaxStackSize(1).setUnlocalizedName("NullTool").setCreativeTab(Periodicraft.tabTools);
 		this.toolMaterial = par3EnumToolMaterial;
 		this.damageVsEntity = par2 + toolMaterial.getDamageVsEntity();
+		this.setMaxDamage(par3EnumToolMaterial.getMaxUses());
+		this.efficiencyOnProperMaterial = par3EnumToolMaterial.getEfficiencyOnProperMaterial();
 		
 	}
 	
