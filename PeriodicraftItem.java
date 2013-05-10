@@ -31,7 +31,7 @@ public class PeriodicraftItem extends Item {
 
         if (armorType == 0)
         {
-            return itemID == Block.pumpkin.blockID || itemID == Item.skull.itemID;
+            return itemID == Block.pumpkin.blockID || itemID == Item.skull.itemID || itemID == Block.glowStone.blockID;
         }
 
         return false;

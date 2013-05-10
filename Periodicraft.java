@@ -82,6 +82,7 @@ import mods.Periodicraft.item.ItemPlatinumAxe;
 import mods.Periodicraft.item.ItemPlatinumHoe;
 import mods.Periodicraft.item.ItemPlatinumIngot;
 import mods.Periodicraft.item.ItemPlatinumPickaxe;
+import mods.Periodicraft.item.ItemPlatinumShovel;
 import mods.Periodicraft.item.ItemPoloniumShard;
 import mods.Periodicraft.item.ItemRutheniumIngot;
 import mods.Periodicraft.item.ItemScandiumIngot;
@@ -113,6 +114,7 @@ import mods.Periodicraft.item.ItemZincDust;
 import mods.Periodicraft.item.weapon.ItemCopperSword;
 import mods.Periodicraft.item.weapon.ItemFlameThrower;
 import mods.Periodicraft.item.weapon.ItemPistol;
+import mods.Periodicraft.item.weapon.ItemPlatinumSword;
 import mods.Periodicraft.item.weapon.ItemSteelSword;
 import mods.Periodicraft.item.weapon.ItemTitaniumSword;
 import mods.Periodicraft.item.weapon.ItemTungstenSword;
@@ -150,7 +152,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid="Periodicraft", name="Periodicraft", version="Alpha 1.0.2")
+@Mod(modid="Periodicraft", name="Periodicraft", version="Alpha 1.0.3")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Periodicraft {
@@ -337,6 +339,8 @@ public class Periodicraft {
 	public static final Item PlatinumPickaxe = new ItemPlatinumPickaxe(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	public static final Item PlatinumHoe = new ItemPlatinumHoe(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	public static final Item PlatinumAxe = new ItemPlatinumAxe(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
+	public static final Item PlatinumShovel = new ItemPlatinumShovel(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
+	public static final Item PlatinumSword = new ItemPlatinumSword(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	
 	//Mobs/Entitys
 	int MoonManID = ID.eID();
@@ -621,6 +625,9 @@ public class Periodicraft {
     	LanguageRegistry.addName(PlatinumAlloy, "Platinum Alloy");
     	LanguageRegistry.addName(PlatinumPickaxe, "Platinum Pickaxe");
     	LanguageRegistry.addName(PlatinumHoe, "Platinum Hoe");
+    	LanguageRegistry.addName(PlatinumAxe, "Platinum Axe");
+    	LanguageRegistry.addName(PlatinumShovel, "Platinum Shovel");
+    	LanguageRegistry.addName(PlatinumSword, "Platinum Sword");
     	
     	
     	
@@ -699,6 +706,9 @@ public class Periodicraft {
         GameRegistry.addRecipe(new ItemStack(this.InflatableHouse), "xxx", "x x", "   ", 'x', new ItemStack(Periodicraft.CompressedWood));
         GameRegistry.addRecipe(new ItemStack(this.PlatinumPickaxe), "xxx", " i ", " i ", 'x', new ItemStack(this.PlatinumAlloy), 'i', StickStack);
         GameRegistry.addRecipe(new ItemStack(this.PlatinumHoe), "xx ", " i ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
+        GameRegistry.addRecipe(new ItemStack(this.PlatinumAxe), "xx ", "xi ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
+        GameRegistry.addRecipe(new ItemStack(this.PlatinumShovel), " x ", " i ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
+        GameRegistry.addRecipe(new ItemStack(this.PlatinumSword), " x ", " x ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
         
         
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.CopperDust, 1),  new Object[] {Periodicraft.CopperNugget});
