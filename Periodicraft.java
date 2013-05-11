@@ -197,13 +197,13 @@ public class Periodicraft {
 	
 	public static CreativeTabs tabSpace = new CreativeTabs("tabSpace") {
         public ItemStack getIconItemStack() {
-                return new ItemStack(Periodicraft.TitaniumSword, 1, 0);
+                return new ItemStack(Periodicraft.MoonStone, 1, 0);
         }
 	};
 	
 	public static CreativeTabs tabUtility = new CreativeTabs("tabUtility") {
         public ItemStack getIconItemStack() {
-                return new ItemStack(Periodicraft.TitaniumSword, 1, 0);
+                return new ItemStack(Block.chest, 1, 0);
         }
 	};
 	
