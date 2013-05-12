@@ -11,7 +11,8 @@ public enum EnumPeriodicraftArmorMaterial {
     	GOLD(7, new int[]{2, 5, 3, 1}, 25),
     	DIAMOND(33, new int[]{3, 8, 6, 3}, 10),
     	TITANIUM(36, new int[]{4, 9, 7, 4}, 13),
-    	TUNGSTEN(18, new int[]{2, 7, 4, 2}, 11);
+    	TUNGSTEN(18, new int[]{2, 7, 4, 2}, 11),
+    	COPPER(12, new int[]{2, 4, 4, 1}, 8);
 
 	    /**
 	     * Holds the maximum damage factor (each piece multiply this by it's own value) of the material, this is the item

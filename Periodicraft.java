@@ -32,6 +32,7 @@ import mods.Periodicraft.block.ore.BlockNickelOre;
 import mods.Periodicraft.block.ore.BlockPhosphorusOre;
 import mods.Periodicraft.block.ore.BlockPlatinumOre;
 import mods.Periodicraft.block.ore.BlockPoloniumOre;
+import mods.Periodicraft.block.ore.BlockPraseodymiumOre;
 import mods.Periodicraft.block.ore.BlockRutheniumOre;
 import mods.Periodicraft.block.ore.BlockScandiumOre;
 import mods.Periodicraft.block.ore.BlockSilverOre;
@@ -56,6 +57,7 @@ import mods.Periodicraft.item.ItemBronzeDust;
 import mods.Periodicraft.item.ItemCarbonDust;
 import mods.Periodicraft.item.ItemChromiumIngot;
 import mods.Periodicraft.item.ItemCobaltIngot;
+import mods.Periodicraft.item.ItemCopperArmor;
 import mods.Periodicraft.item.ItemCopperAxe;
 import mods.Periodicraft.item.ItemCopperDust;
 import mods.Periodicraft.item.ItemCopperHoe;
@@ -129,7 +131,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityEggInfo;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -341,6 +342,8 @@ public class Periodicraft {
 	public static final Item PlatinumAxe = new ItemPlatinumAxe(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	public static final Item PlatinumShovel = new ItemPlatinumShovel(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	public static final Item PlatinumSword = new ItemPlatinumSword(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
+	public static final Item CopperHelm = new ItemCopperArmor(ID.id(), EnumPeriodicraftArmorMaterial.COPPER, 2, 0, "CopperHelm");
+	public static final Block PraseodymiumOre = new BlockPraseodymiumOre(ID.id(), Material.rock);
 	
 	//Mobs/Entitys
 	int MoonManID = ID.eID();
@@ -405,6 +408,10 @@ public class Periodicraft {
     	GameRegistry.registerWorldGenerator(new PeriodicraftWorldGenerator());
     	
     	//Blocks
+    	LanguageRegistry.addName(PraseodymiumOre, "Praseodymium Ore");
+    	MinecraftForge.setBlockHarvestLevel(PraseodymiumOre, "pickaxe", 3);
+    	GameRegistry.registerBlock(PraseodymiumOre, "PraseodymiumOre");
+    	
     	LanguageRegistry.addName(InflatableHouseDecor, "Inflatable House Decorations");
     	MinecraftForge.setBlockHarvestLevel(InflatableHouseDecor, "axe", 0);
     	GameRegistry.registerBlock(InflatableHouseDecor, "InflatableHouseDecor");
@@ -628,10 +635,11 @@ public class Periodicraft {
     	LanguageRegistry.addName(PlatinumAxe, "Platinum Axe");
     	LanguageRegistry.addName(PlatinumShovel, "Platinum Shovel");
     	LanguageRegistry.addName(PlatinumSword, "Platinum Sword");
+    	LanguageRegistry.addName(CopperHelm, "Copper Helmet");
     	
     	
     	
-    	float xp = 2.0F;
+    	float xp = 2.1F;
     	
     	//crafting and smelting
     	ItemStack DirtStack = new ItemStack(Block.dirt);
@@ -709,6 +717,7 @@ public class Periodicraft {
         GameRegistry.addRecipe(new ItemStack(this.PlatinumAxe), "xx ", "xi ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
         GameRegistry.addRecipe(new ItemStack(this.PlatinumShovel), " x ", " i ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
         GameRegistry.addRecipe(new ItemStack(this.PlatinumSword), " x ", " x ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
+        GameRegistry.addRecipe(new ItemStack(this.CopperHelm), "xxx", "x x", "   ", 'x', CopperIngotStack);
         
         
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.CopperDust, 1),  new Object[] {Periodicraft.CopperNugget});
@@ -719,26 +728,27 @@ public class Periodicraft {
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.VanadiumAlloy), new Object[] {Periodicraft.SteelAlloy, Periodicraft.CopperIngot, Periodicraft.VanadiumIngot});
         GameRegistry.addShapelessRecipe(new ItemStack(this.PlatinumAlloy), new Object[] {this.PlatinumIngot, this.RuthinumIngot});  
         
-        GameRegistry.addSmelting(Periodicraft.CopperOre.blockID, CopperIngotStack, 0.5F);
-        GameRegistry.addSmelting(Periodicraft.TitaniumOre.blockID, TitaniumIngotStack, 6.0F);
-        GameRegistry.addSmelting(Periodicraft.BlueStone.blockID, BlueStoneShardStack, 1.5F);
-        GameRegistry.addSmelting(Periodicraft.TinOre.blockID, TinIngotStack, 0.5F);
-        GameRegistry.addSmelting(Item.ingotIron.itemID, SteelIngotStack, 1.0F);
-        GameRegistry.addSmelting(Periodicraft.SiliconSand.blockID, SiliconShardStack, 1.5F);
+        GameRegistry.addSmelting(Periodicraft.CopperOre.blockID, CopperIngotStack, xp);
+        GameRegistry.addSmelting(Periodicraft.TitaniumOre.blockID, TitaniumIngotStack, 3.0F);
+        GameRegistry.addSmelting(Periodicraft.BlueStone.blockID, BlueStoneShardStack, xp);
+        GameRegistry.addSmelting(Periodicraft.TinOre.blockID, TinIngotStack, xp);
+        GameRegistry.addSmelting(Item.ingotIron.itemID, SteelIngotStack, xp);
+        GameRegistry.addSmelting(Periodicraft.SiliconSand.blockID, SiliconShardStack, xp);
         GameRegistry.addSmelting(Periodicraft.BerylliumOre.blockID, BerylliumIngotStack, 2.5F);
-        GameRegistry.addSmelting(Periodicraft.ChromiumIngot.itemID, ChomiumIngotStack, 1.0F);
-        GameRegistry.addSmelting(Periodicraft.CobaltOre.blockID, CobaltIngotStack, 1.0F);
+        GameRegistry.addSmelting(Periodicraft.ChromiumIngot.itemID, ChomiumIngotStack, xp);
+        GameRegistry.addSmelting(Periodicraft.CobaltOre.blockID, CobaltIngotStack, xp);
         GameRegistry.addSmelting(Periodicraft.ManganeseOre.blockID, ManganeseCrystalStack, 5.5F);
-        GameRegistry.addSmelting(Periodicraft.NeodymiumOre.blockID, NeodymiumIngotStack, 0.5F);
-        GameRegistry.addSmelting(Periodicraft.PlatinumOre.blockID, PlatinumIngotStack, 1.0F);
-        GameRegistry.addSmelting(Periodicraft.AluminumOre.blockID, AluminumIngotStack, 1.0F);
-        GameRegistry.addSmelting(Periodicraft.NickelOre.blockID, new ItemStack(Periodicraft.NickelIngot), 1.0F);
-        GameRegistry.addSmelting(Periodicraft.ChromiumOre.blockID, new ItemStack(Periodicraft.ChromiumIngot), 1.0F);
+        GameRegistry.addSmelting(Periodicraft.NeodymiumOre.blockID, NeodymiumIngotStack, xp);
+        GameRegistry.addSmelting(Periodicraft.PlatinumOre.blockID, PlatinumIngotStack, xp);
+        GameRegistry.addSmelting(Periodicraft.AluminumOre.blockID, AluminumIngotStack, xp);
+        GameRegistry.addSmelting(Periodicraft.NickelOre.blockID, new ItemStack(Periodicraft.NickelIngot), xp);
+        GameRegistry.addSmelting(Periodicraft.ChromiumOre.blockID, new ItemStack(Periodicraft.ChromiumIngot), xp);
         GameRegistry.addSmelting(Periodicraft.ScandiumOre.blockID, new ItemStack(Periodicraft.ScandiumIngot), xp);
         GameRegistry.addSmelting(Periodicraft.VanadiumOre.blockID, new ItemStack(Periodicraft.VanadiumIngot), xp);
         GameRegistry.addSmelting(Periodicraft.SilverOre.blockID, new ItemStack(Periodicraft.SilverIngot), xp);
         GameRegistry.addSmelting(this.HafniumOre.blockID, new ItemStack(this.HafniumIngot), xp);
-        
+        GameRegistry.addSmelting(this.TungstenOre.blockID, new ItemStack(this.TungstenIngot), xp);
+        GameRegistry.addSmelting(this.RutheniumOre.blockID, new ItemStack(this.RuthinumIngot), xp);
         
     }
     
