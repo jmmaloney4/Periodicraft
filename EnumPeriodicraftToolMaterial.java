@@ -15,7 +15,8 @@ public enum EnumPeriodicraftToolMaterial {
     COPPER(2, 125, 4.5F, 1, 7),
     STEELSWORD(2, 1940, 7.0F, 5, 14),
     STEEL(2, 1940, 7.0F, 2, 10),
-    PLATINUM(3, 1895, 8.5F, 4, 11);
+    PLATINUM(3, 1895, 8.5F, 4, 11),
+    BRONZE(2, 800, 7.0F, 3, 13);
 
     /**
      * The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = IRON/GOLD)

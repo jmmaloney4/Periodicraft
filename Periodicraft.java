@@ -53,7 +53,10 @@ import mods.Periodicraft.item.ItemBerylliumIngot;
 import mods.Periodicraft.item.ItemBlueStoneGem;
 import mods.Periodicraft.item.ItemBlueStoneShard;
 import mods.Periodicraft.item.ItemBoronDust;
+import mods.Periodicraft.item.ItemBronzeBattleAxe;
 import mods.Periodicraft.item.ItemBronzeDust;
+import mods.Periodicraft.item.ItemBronzeIngot;
+import mods.Periodicraft.item.ItemBronzeNugget;
 import mods.Periodicraft.item.ItemCarbonDust;
 import mods.Periodicraft.item.ItemChromiumIngot;
 import mods.Periodicraft.item.ItemCobaltIngot;
@@ -86,6 +89,8 @@ import mods.Periodicraft.item.ItemPlatinumIngot;
 import mods.Periodicraft.item.ItemPlatinumPickaxe;
 import mods.Periodicraft.item.ItemPlatinumShovel;
 import mods.Periodicraft.item.ItemPoloniumShard;
+import mods.Periodicraft.item.ItemPraseodymiumAlloy;
+import mods.Periodicraft.item.ItemPraseodymiumIngot;
 import mods.Periodicraft.item.ItemRutheniumIngot;
 import mods.Periodicraft.item.ItemScandiumIngot;
 import mods.Periodicraft.item.ItemSiliconPlate;
@@ -343,7 +348,15 @@ public class Periodicraft {
 	public static final Item PlatinumShovel = new ItemPlatinumShovel(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	public static final Item PlatinumSword = new ItemPlatinumSword(ID.id(), EnumPeriodicraftToolMaterial.PLATINUM);
 	public static final Item CopperHelm = new ItemCopperArmor(ID.id(), EnumPeriodicraftArmorMaterial.COPPER, 2, 0, "CopperHelm");
+	public static final Item CopperChest = new ItemCopperArmor(ID.id(), EnumPeriodicraftArmorMaterial.COPPER, 2, 1, "CopperChest");
+	public static final Item CopperLegs = new ItemCopperArmor(ID.id(), EnumPeriodicraftArmorMaterial.COPPER, 2, 2, "CopperLegs");
+	public static final Item CopperBoots = new ItemCopperArmor(ID.id(), EnumPeriodicraftArmorMaterial.COPPER, 2, 3, "CopperBoots");
 	public static final Block PraseodymiumOre = new BlockPraseodymiumOre(ID.id(), Material.rock);
+	final public static Item PraseodymiumIngot = new ItemPraseodymiumIngot(ID.id());
+	public static final Item PraseodymiumAlloy = new ItemPraseodymiumAlloy(ID.id());
+	public static final Item BronzeNugget = new ItemBronzeNugget(ID.id());
+	public static final Item BronzeIngot = new ItemBronzeIngot(ID.id());
+	public static final Item BronzeBattleAxe = new ItemBronzeBattleAxe(ID.id());
 	
 	//Mobs/Entitys
 	int MoonManID = ID.eID();
@@ -417,7 +430,7 @@ public class Periodicraft {
     	GameRegistry.registerBlock(InflatableHouseDecor, "InflatableHouseDecor");
     	
     	LanguageRegistry.addName(CompressedWood, "Compressed Wood");
-    	MinecraftForge.setBlockHarvestLevel(CompressedWood, "axe", 0);
+    	MinecraftForge.setBlockHarvestLevel(CompressedWood, "axe", 1);
     	GameRegistry.registerBlock(CompressedWood, "CompressedWood");
     	
     	LanguageRegistry.addName(MoonPortal, "Moon Portal");
@@ -556,6 +569,8 @@ public class Periodicraft {
     	GameRegistry.registerBlock(RutheniumOre, "RutheniumOre");
     	
     	//Items
+    	LanguageRegistry.addName(PraseodymiumAlloy, "Praseodymium Alloy");
+    	LanguageRegistry.addName(PraseodymiumIngot, "Praseodymium Ingot");
     	LanguageRegistry.addName(LaserPulseRifle, "Laser Pulse Rifle");
     	LanguageRegistry.addName(PoloniumShard, "Polonium Shard");
     	LanguageRegistry.addName(BoronDust, "Boron Dust");
@@ -636,7 +651,12 @@ public class Periodicraft {
     	LanguageRegistry.addName(PlatinumShovel, "Platinum Shovel");
     	LanguageRegistry.addName(PlatinumSword, "Platinum Sword");
     	LanguageRegistry.addName(CopperHelm, "Copper Helmet");
-    	
+    	LanguageRegistry.addName(CopperChest, "Copper Chestplate");
+    	LanguageRegistry.addName(CopperLegs, "Copper Leggings");
+    	LanguageRegistry.addName(CopperBoots, "Copper Boots");
+    	LanguageRegistry.addName(BronzeNugget, "Bronze Nugget");
+    	LanguageRegistry.addName(BronzeIngot, "Bronze Ingot");
+    	LanguageRegistry.addName(BronzeBattleAxe, "Bronze Battle Axe");
     	
     	
     	float xp = 2.1F;
@@ -673,6 +693,7 @@ public class Periodicraft {
         ItemStack AluminumIngotStack = new ItemStack(Periodicraft.AluiminumIngot);
         ItemStack BulletStack = new ItemStack(Periodicraft.Bullet);
         ItemStack PlatinumAlloyStack = new ItemStack(this.PlatinumAlloy);
+        ItemStack BronzeIngotStack = new ItemStack(this.BronzeIngot);
         
         GameRegistry.addRecipe(new ItemStack(Block.cobblestone), "xyx", "yzy", "xyx",
                 'x', DirtStack, 'y', GravelStack, 'z', SandStack);
@@ -718,7 +739,11 @@ public class Periodicraft {
         GameRegistry.addRecipe(new ItemStack(this.PlatinumShovel), " x ", " i ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
         GameRegistry.addRecipe(new ItemStack(this.PlatinumSword), " x ", " x ", " i ", 'x', PlatinumAlloyStack, 'i', StickStack);
         GameRegistry.addRecipe(new ItemStack(this.CopperHelm), "xxx", "x x", "   ", 'x', CopperIngotStack);
-        
+        GameRegistry.addRecipe(new ItemStack(this.CopperChest), "x x", "xxx", "xxx", 'x', CopperIngotStack);
+        GameRegistry.addRecipe(new ItemStack(this.CopperLegs), "xxx", "x x", "x x", 'x', CopperIngotStack);
+        GameRegistry.addRecipe(new ItemStack(this.CopperBoots), "   ", "x x", "x x", 'x', CopperIngotStack);
+        GameRegistry.addRecipe(new ItemStack(this.BronzeIngot), "xxx", "xxx", "xxx", 'x', new ItemStack(this.BronzeNugget));
+        GameRegistry.addRecipe(new ItemStack(this.BronzeBattleAxe), "xxx", "xix", " i ", 'x', BronzeIngotStack, 'i', StickStack);
         
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.CopperDust, 1),  new Object[] {Periodicraft.CopperNugget});
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.CopperNugget, 9), new Object[] {Periodicraft.CopperIngot});
@@ -726,7 +751,8 @@ public class Periodicraft {
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.TinDust, 1), new Object[] {Periodicraft.TinNugget});
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.SteelAlloy), new Object[] {Periodicraft.SteelIngot, Periodicraft.AluiminumIngot, Periodicraft.ChromiumIngot, Periodicraft.NickelIngot});
         GameRegistry.addShapelessRecipe(new ItemStack(Periodicraft.VanadiumAlloy), new Object[] {Periodicraft.SteelAlloy, Periodicraft.CopperIngot, Periodicraft.VanadiumIngot});
-        GameRegistry.addShapelessRecipe(new ItemStack(this.PlatinumAlloy), new Object[] {this.PlatinumIngot, this.RuthinumIngot});  
+        GameRegistry.addShapelessRecipe(new ItemStack(this.PlatinumAlloy), new Object[] {this.PlatinumIngot, this.RuthinumIngot});
+        GameRegistry.addShapelessRecipe(new ItemStack(this.PraseodymiumAlloy), new Object[] {this.PraseodymiumIngot, this.SteelAlloy, this.MagnesiumShard});
         
         GameRegistry.addSmelting(Periodicraft.CopperOre.blockID, CopperIngotStack, xp);
         GameRegistry.addSmelting(Periodicraft.TitaniumOre.blockID, TitaniumIngotStack, 3.0F);
@@ -749,6 +775,8 @@ public class Periodicraft {
         GameRegistry.addSmelting(this.HafniumOre.blockID, new ItemStack(this.HafniumIngot), xp);
         GameRegistry.addSmelting(this.TungstenOre.blockID, new ItemStack(this.TungstenIngot), xp);
         GameRegistry.addSmelting(this.RutheniumOre.blockID, new ItemStack(this.RuthinumIngot), xp);
+        GameRegistry.addSmelting(this.PraseodymiumOre.blockID, new ItemStack(this.PraseodymiumIngot), xp);
+        GameRegistry.addSmelting(this.BronzeDust.itemID, new ItemStack(this.BronzeNugget), xp);
         
     }
     
