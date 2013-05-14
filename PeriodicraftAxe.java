@@ -14,8 +14,8 @@ public class PeriodicraftAxe extends PeriodicraftTool {
 
     public static final Block[] blocksEffectiveAgainst = new Block[] {Block.planks, Block.bookShelf, Block.wood, Block.chest, Block.stoneDoubleSlab, Block.stoneSingleSlab, Block.pumpkin, Block.pumpkinLantern, Block.melon};
 
-	public PeriodicraftAxe(int par1, EnumPeriodicraftToolMaterial par2EnumToolMaterial) {
-		super(par1, 1, par2EnumToolMaterial, blocksEffectiveAgainst);
+	public PeriodicraftAxe(int par1,  EnumPeriodicraftToolMaterial par2EnumToolMaterial) {
+		super(par1, 2, par2EnumToolMaterial, blocksEffectiveAgainst);
 		this.maxStackSize = 1;
 		this.setUnlocalizedName("NullAxe").setCreativeTab(Periodicraft.tabTools);
 	}
