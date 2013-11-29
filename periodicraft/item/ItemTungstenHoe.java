@@ -1,0 +1,12 @@
+package mods.Periodicraft.item;
+
+import mods.Periodicraft.EnumPeriodicraftToolMaterial;
+import mods.Periodicraft.PeriodicraftHoe;
+
+public class ItemTungstenHoe extends PeriodicraftHoe {
+
+	public ItemTungstenHoe(int par1, EnumPeriodicraftToolMaterial par2EnumToolMaterial) {
+		super(par1, par2EnumToolMaterial);
+		this.setUnlocalizedName("TungstenHoe");
+	}
+}
