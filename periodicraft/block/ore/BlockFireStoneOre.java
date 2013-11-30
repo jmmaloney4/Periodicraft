@@ -1,6 +1,6 @@
-package mods.Periodicraft.block.ore;
+package mods.periodicraft.block.ore;
 
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.PeriodicraftBlock;
 import net.minecraft.block.material.Material;
 
 public class BlockFireStoneOre extends PeriodicraftBlock {

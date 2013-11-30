@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 //Periodicraft Class
 //Created By Jack Maloney on 3/10/2013

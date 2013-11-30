@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.projectile.EntityThrowable;

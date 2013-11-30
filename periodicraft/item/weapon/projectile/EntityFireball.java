@@ -1,4 +1,4 @@
-package mods.Periodicraft.item.weapon.projectile;
+package mods.periodicraft.item.weapon.projectile;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLiving;

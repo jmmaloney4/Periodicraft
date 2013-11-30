@@ -1,4 +1,4 @@
-package mods.Periodicraft.block.gui;
+package mods.periodicraft.block.gui;
 
 import java.util.Random;
 
@@ -10,8 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftContainer;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftContainer;
 
 public class ContainerEinsteiniumChest extends PeriodicraftContainer {
 

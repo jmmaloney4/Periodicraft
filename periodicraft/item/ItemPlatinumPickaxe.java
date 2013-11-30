@@ -1,7 +1,7 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.PeriodicraftPick;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.PeriodicraftPick;
 import net.minecraft.item.EnumToolMaterial;
 
 public class ItemPlatinumPickaxe extends PeriodicraftPick {

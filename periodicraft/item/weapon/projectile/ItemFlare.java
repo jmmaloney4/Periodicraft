@@ -1,7 +1,7 @@
-package mods.Periodicraft.item.weapon.projectile;
+package mods.periodicraft.item.weapon.projectile;
 
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemFlare extends PeriodicraftItem {
 

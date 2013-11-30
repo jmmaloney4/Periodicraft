@@ -1,7 +1,7 @@
-package mods.Periodicraft.item.weapon;
+package mods.periodicraft.item.weapon;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.PeriodicraftSword;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.PeriodicraftSword;
 
 public class ItemPlatinumSword extends PeriodicraftSword {
 

@@ -1,4 +1,4 @@
-package mods.Periodicraft.biome;
+package mods.periodicraft.biome;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.BiomeGenEnd;

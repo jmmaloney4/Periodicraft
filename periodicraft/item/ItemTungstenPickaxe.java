@@ -1,8 +1,8 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftPick;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftPick;
 
 public class ItemTungstenPickaxe extends PeriodicraftPick {
 

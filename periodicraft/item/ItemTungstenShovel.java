@@ -1,9 +1,9 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
 import net.minecraft.item.EnumToolMaterial;
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftShovel;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftShovel;
 
 public class ItemTungstenShovel extends PeriodicraftShovel {
 

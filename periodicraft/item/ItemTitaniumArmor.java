@@ -1,12 +1,12 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
 //Periodicraft Class
 //Created By Jack Maloney on 3/17/2013
 //Copyright (C)2013 Jack Maloney
 
-import mods.Periodicraft.EnumPeriodicraftArmorMaterial;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftArmor;
+import mods.periodicraft.EnumPeriodicraftArmorMaterial;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftArmor;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;	
 import net.minecraft.entity.player.PlayerCapabilities;

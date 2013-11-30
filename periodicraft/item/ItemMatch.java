@@ -1,10 +1,10 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemMatch extends PeriodicraftItem {
 

@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

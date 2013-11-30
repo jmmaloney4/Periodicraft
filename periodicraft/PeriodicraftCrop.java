@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IconRegister;

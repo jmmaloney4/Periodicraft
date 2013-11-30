@@ -1,7 +1,7 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.PeriodicraftAxe;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.PeriodicraftAxe;
 
 public class ItemPlatinumAxe extends PeriodicraftAxe {
 

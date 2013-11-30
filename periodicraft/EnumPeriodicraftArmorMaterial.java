@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;

@@ -1,7 +1,7 @@
-package mods.Periodicraft.block.ore;
+package mods.periodicraft.block.ore;
 
 import net.minecraft.block.material.Material;
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.PeriodicraftBlock;
 
 public class BlockUraniumOre extends PeriodicraftBlock {
 

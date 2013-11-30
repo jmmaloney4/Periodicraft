@@ -1,8 +1,8 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.PeriodicraftBattleAxe;
-import mods.Periodicraft.PeriodicraftSword;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.PeriodicraftBattleAxe;
+import mods.periodicraft.PeriodicraftSword;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;

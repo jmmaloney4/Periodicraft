@@ -1,6 +1,6 @@
-package mods.Periodicraft.biome;
+package mods.periodicraft.biome;
 
-import mods.Periodicraft.dimension.moon.BiomeMoonPlains;
+import mods.periodicraft.dimension.moon.BiomeMoonPlains;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenEnd;

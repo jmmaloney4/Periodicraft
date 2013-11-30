@@ -1,9 +1,9 @@
-package mods.Periodicraft.block;
+package mods.periodicraft.block;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.PeriodicraftBlock;
 
 public class BlockMoonRocket extends PeriodicraftBlock {
 

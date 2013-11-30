@@ -1,4 +1,4 @@
-package mods.Periodicraft.item.weapon.projectile;
+package mods.periodicraft.item.weapon.projectile;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -6,8 +6,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemFlareGun extends PeriodicraftItem {
 

@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

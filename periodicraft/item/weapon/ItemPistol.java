@@ -1,4 +1,4 @@
-package mods.Periodicraft.item.weapon;
+package mods.periodicraft.item.weapon;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -11,10 +11,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
-import mods.Periodicraft.ID;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftItem;
-import mods.Periodicraft.item.weapon.projectile.EntityBullet;
+import mods.periodicraft.ID;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftItem;
+import mods.periodicraft.item.weapon.projectile.EntityBullet;
 
 public class ItemPistol extends PeriodicraftItem {
 

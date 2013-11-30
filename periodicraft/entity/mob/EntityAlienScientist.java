@@ -1,6 +1,6 @@
-package mods.Periodicraft.entity.mob;
+package mods.periodicraft.entity.mob;
 
-import mods.Periodicraft.Periodicraft;
+import mods.periodicraft.Periodicraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;

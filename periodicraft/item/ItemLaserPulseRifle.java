@@ -1,13 +1,13 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftItem;
-import mods.Periodicraft.item.weapon.projectile.EntityFireball;
-import mods.Periodicraft.item.weapon.projectile.EntityLaserPulse;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftItem;
+import mods.periodicraft.item.weapon.projectile.EntityFireball;
+import mods.periodicraft.item.weapon.projectile.EntityLaserPulse;
 
 public class ItemLaserPulseRifle extends PeriodicraftItem {
 

@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -9,6 +9,7 @@ import net.minecraft.dispenser.IBehaviorDispenseItem;
 import net.minecraft.dispenser.IBehaviorDispenseItem;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.BehaviorDispenseArmor;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -23,7 +24,7 @@ public class PeriodicraftArmor extends PeriodicraftItem {
     private static final int[] maxDamageArray = new int[] {11, 16, 15, 13};
     private static final String[] field_94606_cu = new String[] {"helmetCloth_overlay", "chestplateCloth_overlay", "leggingsCloth_overlay", "bootsCloth_overlay"};
     public static final String[] field_94603_a = new String[] {"slot_empty_helmet", "slot_empty_chestplate", "slot_empty_leggings", "slot_empty_boots"};
-    private static final IBehaviorDispenseItem field_96605_cw = new BehaivorDispenseArmor();
+    private static final IBehaviorDispenseItem field_96605_cw = new net.minecraft.item.BehaviorDispenseArmor();
     /**
      * Stores the armor type: 0 is helmet, 1 is plate, 2 is legs and 3 is boots
      */

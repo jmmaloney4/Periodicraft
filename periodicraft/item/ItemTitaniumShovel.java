@@ -1,8 +1,8 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftShovel;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftShovel;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSpade;

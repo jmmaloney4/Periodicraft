@@ -1,13 +1,13 @@
-package mods.Periodicraft.item.weapon;
+package mods.periodicraft.item.weapon;
 
 //Periodicraft Class
 //Created By Jack Maloney on 3/13/2013
 //Copyright (C)2013 Jack Maloney
 
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftSword;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftSword;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSword;

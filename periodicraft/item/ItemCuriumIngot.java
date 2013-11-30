@@ -1,6 +1,6 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemCuriumIngot extends PeriodicraftItem {
 

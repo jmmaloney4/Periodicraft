@@ -1,7 +1,7 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftFood;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftFood;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;

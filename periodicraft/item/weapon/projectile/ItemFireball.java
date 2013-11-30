@@ -1,6 +1,6 @@
-package mods.Periodicraft.item.weapon.projectile;
+package mods.periodicraft.item.weapon.projectile;
 
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemFireball extends PeriodicraftItem {
 

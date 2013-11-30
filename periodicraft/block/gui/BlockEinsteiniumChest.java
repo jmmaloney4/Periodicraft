@@ -1,10 +1,10 @@
-package mods.Periodicraft.block.gui;
+package mods.periodicraft.block.gui;
 
 import java.util.Random;
 
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftBlock;
-import mods.Periodicraft.block.tileEntity.TileEntityEinsteiniumChest;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftBlock;
+import mods.periodicraft.block.tileEntity.TileEntityEinsteiniumChest;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;

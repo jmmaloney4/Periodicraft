@@ -1,11 +1,11 @@
-package mods.Periodicraft.block.ore;
+package mods.periodicraft.block.ore;
 
 //Periodicraft Class
 //Copyright (C) 2013 Jack Maloney
 
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.PeriodicraftBlock;
 
 public class BlockChromiumOre extends PeriodicraftBlock {
 

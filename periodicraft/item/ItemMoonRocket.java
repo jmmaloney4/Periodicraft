@@ -1,6 +1,6 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.PeriodicraftItem;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;

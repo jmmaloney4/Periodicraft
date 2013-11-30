@@ -1,8 +1,8 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemBerylliumIngot extends PeriodicraftItem {
 

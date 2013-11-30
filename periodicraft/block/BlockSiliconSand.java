@@ -1,10 +1,10 @@
-package mods.Periodicraft.block;
+package mods.periodicraft.block;
 
 //Periodicraft Class
 //Copyright (C)2013 Jack Maloney
 
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

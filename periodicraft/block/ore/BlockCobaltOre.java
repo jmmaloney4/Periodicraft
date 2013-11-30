@@ -1,9 +1,9 @@
-package mods.Periodicraft.block.ore;
+package mods.periodicraft.block.ore;
 
 //Periodicraft Class
 //Copyright (C)2013 Jack Maloney
 
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.PeriodicraftBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 

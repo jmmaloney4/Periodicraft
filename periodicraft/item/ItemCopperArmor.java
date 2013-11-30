@@ -1,7 +1,7 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftArmorMaterial;
-import mods.Periodicraft.PeriodicraftArmor;
+import mods.periodicraft.EnumPeriodicraftArmorMaterial;
+import mods.periodicraft.PeriodicraftArmor;
 
 public class ItemCopperArmor extends PeriodicraftArmor {
 

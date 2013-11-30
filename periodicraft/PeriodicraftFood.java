@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemFood;

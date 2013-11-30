@@ -1,4 +1,4 @@
-package mods.Periodicraft;
+package mods.periodicraft;
 
 //Periodicraft Class
 //Copyright (C)2013 Jack Maloney

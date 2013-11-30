@@ -1,4 +1,4 @@
-package mods.Periodicraft.block;
+package mods.periodicraft.block;
 
 //Periodicraft Class
 //Created By Jack Maloney on 3/12/2013
@@ -6,8 +6,8 @@ package mods.Periodicraft.block;
 
 import java.util.Random;
 
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

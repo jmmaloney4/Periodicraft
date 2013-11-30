@@ -1,6 +1,6 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.PeriodicraftFood;
+import mods.periodicraft.PeriodicraftFood;
 
 public class ItemCoconut extends PeriodicraftFood {
 

@@ -1,11 +1,12 @@
-package mods.Periodicraft.item.entity;
+package mods.periodicraft.item.entity;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftThrowable;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftThrowable;
+
 import java.util.Arrays;
 
 public class EntityMiningLaser extends PeriodicraftThrowable {

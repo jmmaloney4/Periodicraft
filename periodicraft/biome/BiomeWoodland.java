@@ -1,4 +1,4 @@
-package mods.Periodicraft.biome;
+package mods.periodicraft.biome;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenTaiga1;
 import net.minecraft.world.gen.feature.WorldGenTaiga2;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import mods.Periodicraft.biome.BiomeGenPeriodicraft;
+import mods.periodicraft.biome.BiomeGenPeriodicraft;
 
 public class BiomeWoodland extends BiomeGenPeriodicraft {
 

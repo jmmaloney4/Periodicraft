@@ -1,4 +1,4 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;

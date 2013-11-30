@@ -1,7 +1,7 @@
-package mods.Periodicraft.block;
+package mods.periodicraft.block;
 
 import net.minecraft.block.material.Material;
-import mods.Periodicraft.PeriodicraftBlock;
+import mods.periodicraft.PeriodicraftBlock;
 
 public class BlockInflatableHouseDecor extends PeriodicraftBlock {
 

@@ -1,11 +1,11 @@
-package mods.Periodicraft.block.tileEntity;
+package mods.periodicraft.block.tileEntity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import mods.Periodicraft.PeriodicraftTileEntity;
+import mods.periodicraft.PeriodicraftTileEntity;
 
 public class TileEntityEinsteiniumChest extends PeriodicraftTileEntity implements IInventory {
 

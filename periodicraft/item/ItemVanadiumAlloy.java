@@ -1,7 +1,7 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.Periodicraft;
-import mods.Periodicraft.PeriodicraftItem;
+import mods.periodicraft.Periodicraft;
+import mods.periodicraft.PeriodicraftItem;
 
 public class ItemVanadiumAlloy extends PeriodicraftItem {
 

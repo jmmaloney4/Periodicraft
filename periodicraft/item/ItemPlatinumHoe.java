@@ -1,7 +1,7 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.PeriodicraftHoe;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.PeriodicraftHoe;
 
 public class ItemPlatinumHoe extends PeriodicraftHoe {
 

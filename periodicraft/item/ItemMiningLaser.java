@@ -1,9 +1,9 @@
-package mods.Periodicraft.item;
+package mods.periodicraft.item;
 
-import mods.Periodicraft.EnumPeriodicraftToolMaterial;
-import mods.Periodicraft.PeriodicraftTool;
-import mods.Periodicraft.item.entity.EntityMiningLaser;
-import mods.Periodicraft.item.weapon.projectile.EntityLaserPulse;
+import mods.periodicraft.EnumPeriodicraftToolMaterial;
+import mods.periodicraft.PeriodicraftTool;
+import mods.periodicraft.item.entity.EntityMiningLaser;
+import mods.periodicraft.item.weapon.projectile.EntityLaserPulse;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
