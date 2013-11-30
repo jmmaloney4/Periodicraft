@@ -1,8 +1,15 @@
 package mods.periodicraft;
 
+import java.awt.BorderLayout;
+import java.awt.Component;
 import java.util.logging.Level;
 
+import javax.swing.Box;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.UIManager;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,10 +20,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -24,11 +29,24 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-//Periodicraft Class
-//Copyright (C)2013 Jack Maloney
+/*
+Copyright (C) 2013  Jack Maloney
 
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-@Mod(modid="Periodicraft", name="Periodicraft", version="Alpha 1.0.4")
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+@Mod(modid="Periodicraft", name="Periodicraft", version="1.1.4")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Periodicraft {
@@ -78,54 +96,29 @@ public class Periodicraft {
 		}
 	};
 
-
-
-
-	//Demensions
-	public static final int MoonID = 100;
-	public static final int MarsID = 101;
-	public static final int VenusID = 102;
-	public static final int MercuryID = 103;
-	public static final int EuropaID = 104;
-	public static final int IoID = 105;
-	public static final int TitanID = 106;
-	public static final int EnceladusID = 107;
-	public static final int TitaniaID = 108;
-	public static final int PlutoID = 109;
-	public static final int CharonID = 110;
-
-
-	//Blocks
-
-
-
-	//Mobs/Entitys
-	int MoonManID = ID.eID();
-	int AlienScientistID = ID.eID();  
-
-
-
 	// The instance of your mod that Forge uses.
 	@Instance("Periodicraft")
 	public static Periodicraft instance;
 
 	// Says where the client and server 'proxy' code is loaded.
-	@SidedProxy(clientSide="mods.Periodicraft.client.ClientProxy", serverSide="mods.Periodicraft.CommonProxy")
+	@SidedProxy(clientSide="mods.periodicraft.client.ClientProxy", serverSide="mods.periodicraft.CommonProxy")
 	public static CommonProxy proxy;
 
-	@PreInit
+	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		// Stub Method
 		FMLLog.log(Level.INFO ,"=======================================================Pre-Initalizing Periodicraft=======================================================");
+	
+
 	}
 
-	@Init
+	@EventHandler
 	public void load(FMLInitializationEvent event) {
 
 		proxy.registerRenderers();
 		FMLLog.log(Level.INFO, "=======================================================Initalizing Periodicraft=======================================================");
 		
-		JFrame frame = new JFrame("Initalizing Periodicraft");
+		
 		
 		//CreativeTabs
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabArmor", "en_US", "Armor");
@@ -138,7 +131,7 @@ public class Periodicraft {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabSpace", "en_US", "Space Travel");
 	}
 
-	@PostInit
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Stub Method
 		FMLLog.log(Level.INFO, "=======================================================Starting Periodicraft=======================================================");
