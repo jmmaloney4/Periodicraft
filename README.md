@@ -10,7 +10,7 @@ If you would like to contribute, you can do so by submitting a pull request.
 
 <pre><code>git clone https://github.com/Periodicraft-Dev/Periodicraft-Minecraft-Mod.git
 git chechout -b branch-name
-</pre><code>
+</pre></code>
 
 Then make your changes, and submit a pull request. Then we will review your changes and merge the branch.
 
