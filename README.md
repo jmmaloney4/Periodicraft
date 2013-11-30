@@ -8,8 +8,7 @@ Periodicraft also offers several new items you can't normally get in Minecraft l
 
 If you would like to contribute, you can do so by submitting a pull request.
 
-<pre><code>
-git clone https://github.com/Periodicraft-Dev/Periodicraft-Minecraft-Mod.git
+<pre><code>git clone https://github.com/Periodicraft-Dev/Periodicraft-Minecraft-Mod.git
 git chechout -b branch-name
 </pre><code>
 
