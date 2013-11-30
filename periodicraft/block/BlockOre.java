@@ -24,20 +24,6 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockOre extends PeriodicraftBlock {
 
 	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			CreativeTabs CreativeTab, int drop, int count, float Hardness,
-			float Resistance, int HarvestLevel) {
-		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				drop, count, Hardness, Resistance, CreativeTab);
-	}
-
-	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			CreativeTabs CreativeTab, int drop, int count, float Hardness,
-			float Resistance, float LightValue, int HarvestLevel) {
-		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				drop, count, Hardness, Resistance, CreativeTab, LightValue);
-	}
-
-	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
 			CreativeTabs CreativeTab, float Hardness, float Resistance,
 			int HarvestLevel) {
 		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
@@ -49,5 +35,19 @@ public class BlockOre extends PeriodicraftBlock {
 			float LightValue, int HarvestLevel) {
 		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
 				Hardness, Resistance, CreativeTab, LightValue);
+	}
+
+	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
+			int drop, int count, CreativeTabs CreativeTab, float Hardness,
+			float Resistance, float LightValue, int HarvestLevel) {
+		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
+				Hardness, Resistance, CreativeTab, LightValue);
+	}
+
+	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
+			int drop, int count, CreativeTabs CreativeTab, float Hardness,
+			float Resistance, int HarvestLevel) {
+		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
+				Hardness, Resistance, CreativeTab);
 	}
 }

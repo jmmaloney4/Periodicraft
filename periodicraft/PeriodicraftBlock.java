@@ -33,34 +33,17 @@ public abstract class PeriodicraftBlock extends Block {
 	int dropCount;
 
 	public PeriodicraftBlock(int par1, Material par2Material, String tool,
-			int harvestLevel, String UnlocalizedName, int Drop, int count,
-			float Hardness, float Resistance, CreativeTabs CreativeTab) {
+			int harvestLevel, String UnlocalizedName, float Hardness,
+			float Resistance, CreativeTabs CreativeTab, float LightValue,
+			int LightOpacity) {
 		super(par1, par2Material);
 		// TODO Auto-generated constructor stub
 		this.UnlocalizedName = UnlocalizedName;
-		this.dropID = Drop;
-		this.dropCount = count;
-		this.setTextureName("periodicraft:" + UnlocalizedName)
-				.setCreativeTab(CreativeTab).setHardness(Hardness)
-				.setUnlocalizedName(UnlocalizedName).setResistance(Resistance);
-		LanguageRegistry.addName(this, this.UnlocalizedName);
-		MinecraftForge.setBlockHarvestLevel(this, tool, harvestLevel);
-		GameRegistry.registerBlock(this, this.UnlocalizedName);
-	}
-
-	public PeriodicraftBlock(int par1, Material par2Material, String tool,
-			int harvestLevel, String UnlocalizedName, int Drop, int count,
-			float Hardness, float Resistance, CreativeTabs CreativeTab,
-			float LightValue) {
-		super(par1, par2Material);
-		// TODO Auto-generated constructor stub
-		this.UnlocalizedName = UnlocalizedName;
-		this.dropID = Drop;
-		this.dropCount = count;
 		this.setTextureName("periodicraft:" + UnlocalizedName)
 				.setUnlocalizedName(UnlocalizedName)
 				.setCreativeTab(CreativeTab).setHardness(Hardness)
-				.setResistance(Resistance).setLightValue(LightValue);
+				.setResistance(Resistance).setLightValue(LightValue)
+				.setLightOpacity(LightOpacity);
 		LanguageRegistry.addName(this, this.UnlocalizedName);
 		MinecraftForge.setBlockHarvestLevel(this, tool, harvestLevel);
 		GameRegistry.registerBlock(this, this.UnlocalizedName);
@@ -69,34 +52,41 @@ public abstract class PeriodicraftBlock extends Block {
 	public PeriodicraftBlock(int par1, Material par2Material, String tool,
 			int harvestLevel, String UnlocalizedName, float Hardness,
 			float Resistance, CreativeTabs CreativeTab) {
-		super(par1, par2Material);
-		// TODO Auto-generated constructor stub
-		this.UnlocalizedName = UnlocalizedName;
-		this.dropID = this.blockID;
-		this.dropCount = 1;
-		this.setTextureName("periodicraft:" + UnlocalizedName)
-				.setCreativeTab(CreativeTab).setHardness(Hardness)
-				.setUnlocalizedName(UnlocalizedName).setResistance(Resistance);
-		LanguageRegistry.addName(this, this.UnlocalizedName);
-		MinecraftForge.setBlockHarvestLevel(this, tool, harvestLevel);
-		GameRegistry.registerBlock(this, this.UnlocalizedName);
+		this(par1, par2Material, tool, harvestLevel, UnlocalizedName, Hardness,
+				Resistance, CreativeTab, 0, 0);
 	}
 
 	public PeriodicraftBlock(int par1, Material par2Material, String tool,
 			int harvestLevel, String UnlocalizedName, float Hardness,
 			float Resistance, CreativeTabs CreativeTab, float LightValue) {
-		super(par1, par2Material);
-		// TODO Auto-generated constructor stub
-		this.UnlocalizedName = UnlocalizedName;
-		this.dropID = this.blockID;
-		this.dropCount = 1;
-		this.setTextureName("periodicraft:" + UnlocalizedName)
-				.setUnlocalizedName(UnlocalizedName)
-				.setCreativeTab(CreativeTab).setHardness(Hardness)
-				.setResistance(Resistance).setLightValue(LightValue);
-		LanguageRegistry.addName(this, this.UnlocalizedName);
-		MinecraftForge.setBlockHarvestLevel(this, tool, harvestLevel);
-		GameRegistry.registerBlock(this, this.UnlocalizedName);
+		this(par1, par2Material, tool, harvestLevel, UnlocalizedName, Hardness,
+				Resistance, CreativeTab, LightValue, 0);
+	}
+
+	public PeriodicraftBlock(int par1, Material par2Material, String tool,
+			int harvestLevel, String UnlocalizedName, int drop, int count,
+			float Hardness, float Resistance, CreativeTabs CreativeTab) {
+		this(par1, par2Material, tool, harvestLevel, UnlocalizedName, Hardness,
+				Resistance, CreativeTab, 0, 0);
+		this.setDropAndCount(drop, count);
+	}
+
+	public PeriodicraftBlock(int par1, Material par2Material, String tool,
+			int harvestLevel, String UnlocalizedName, int drop, int count,
+			float Hardness, float Resistance, CreativeTabs CreativeTab,
+			float LightValue) {
+		this(par1, par2Material, tool, harvestLevel, UnlocalizedName, Hardness,
+				Resistance, CreativeTab, LightValue, 0);
+		this.setDropAndCount(drop, count);
+	}
+
+	public PeriodicraftBlock(int par1, Material par2Material, String tool,
+			int harvestLevel, String UnlocalizedName, int drop, int count,
+			float Hardness, float Resistance, CreativeTabs CreativeTab,
+			float LightValue, int LightOpacity) {
+		this(par1, par2Material, tool, harvestLevel, UnlocalizedName, Hardness,
+				Resistance, CreativeTab, LightValue, LightOpacity);
+		this.setDropAndCount(drop, count);
 	}
 
 	@Override
@@ -107,6 +97,11 @@ public abstract class PeriodicraftBlock extends Block {
 	@Override
 	public String getUnlocalizedName() {
 		return this.UnlocalizedName;
+	}
+
+	protected void setDropAndCount(int drop, int count) {
+		this.dropCount = count;
+		this.dropID = drop;
 	}
 
 }

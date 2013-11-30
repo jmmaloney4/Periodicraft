@@ -22,6 +22,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /*
@@ -58,8 +59,8 @@ public class Periodicraft {
 			Material.rock, "Carbon Ore", Periodicraft.tabBlocks, 4.4F, 3.2F, 2);
 
 	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
-			Material.rock, "Copper Ore", Periodicraft.tabBlocks,
-			Periodicraft.ItemCarbonDust.itemID, 3, 4.4F, 3.2F, 2);
+			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID, 3,
+			Periodicraft.tabBlocks, 4.4F, 3.2F, 2);
 
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
@@ -153,12 +154,7 @@ public class Periodicraft {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabSpace",
 				"en_US", "Space Travel");
 
-		// Ores
-
-		// Ingots
-
-		// Dusts
-
+		GameRegistry.registerWorldGenerator(new PeriodicraftWorldGenerator());
 	}
 
 	@EventHandler
