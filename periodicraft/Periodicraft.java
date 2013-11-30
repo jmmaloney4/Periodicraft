@@ -59,7 +59,7 @@ public class Periodicraft {
 
 	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
 			Material.rock, "Copper Ore", Periodicraft.tabBlocks,
-			Periodicraft.ItemCarbonDust.itemID, 4.4F, 3.2F, 2);
+			Periodicraft.ItemCarbonDust.itemID, 3, 4.4F, 3.2F, 2);
 
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {

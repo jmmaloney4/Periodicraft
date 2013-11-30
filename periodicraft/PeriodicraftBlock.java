@@ -30,14 +30,16 @@ public abstract class PeriodicraftBlock extends Block {
 
 	String UnlocalizedName;
 	int dropID;
+	int dropCount;
 
 	public PeriodicraftBlock(int par1, Material par2Material, String tool,
-			int harvestLevel, String UnlocalizedName, int Drop, float Hardness,
-			float Resistance, CreativeTabs CreativeTab) {
+			int harvestLevel, String UnlocalizedName, int Drop, int count,
+			float Hardness, float Resistance, CreativeTabs CreativeTab) {
 		super(par1, par2Material);
 		// TODO Auto-generated constructor stub
 		this.UnlocalizedName = UnlocalizedName;
 		this.dropID = Drop;
+		this.dropCount = count;
 		this.setTextureName("periodicraft:" + UnlocalizedName)
 				.setCreativeTab(CreativeTab).setHardness(Hardness)
 				.setUnlocalizedName(UnlocalizedName).setResistance(Resistance);
@@ -47,12 +49,14 @@ public abstract class PeriodicraftBlock extends Block {
 	}
 
 	public PeriodicraftBlock(int par1, Material par2Material, String tool,
-			int harvestLevel, String UnlocalizedName, int Drop, float Hardness,
-			float Resistance, CreativeTabs CreativeTab, float LightValue) {
+			int harvestLevel, String UnlocalizedName, int Drop, int count,
+			float Hardness, float Resistance, CreativeTabs CreativeTab,
+			float LightValue) {
 		super(par1, par2Material);
 		// TODO Auto-generated constructor stub
 		this.UnlocalizedName = UnlocalizedName;
 		this.dropID = Drop;
+		this.dropCount = count;
 		this.setTextureName("periodicraft:" + UnlocalizedName)
 				.setUnlocalizedName(UnlocalizedName)
 				.setCreativeTab(CreativeTab).setHardness(Hardness)
@@ -69,6 +73,7 @@ public abstract class PeriodicraftBlock extends Block {
 		// TODO Auto-generated constructor stub
 		this.UnlocalizedName = UnlocalizedName;
 		this.dropID = this.blockID;
+		this.dropCount = 1;
 		this.setTextureName("periodicraft:" + UnlocalizedName)
 				.setCreativeTab(CreativeTab).setHardness(Hardness)
 				.setUnlocalizedName(UnlocalizedName).setResistance(Resistance);
@@ -84,6 +89,7 @@ public abstract class PeriodicraftBlock extends Block {
 		// TODO Auto-generated constructor stub
 		this.UnlocalizedName = UnlocalizedName;
 		this.dropID = this.blockID;
+		this.dropCount = 1;
 		this.setTextureName("periodicraft:" + UnlocalizedName)
 				.setUnlocalizedName(UnlocalizedName)
 				.setCreativeTab(CreativeTab).setHardness(Hardness)

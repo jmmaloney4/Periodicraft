@@ -24,17 +24,17 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockOre extends PeriodicraftBlock {
 
 	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			CreativeTabs CreativeTab, int drop, float Hardness,
+			CreativeTabs CreativeTab, int drop, int count, float Hardness,
 			float Resistance, int HarvestLevel) {
 		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				drop, Hardness, Resistance, CreativeTab);
+				drop, count, Hardness, Resistance, CreativeTab);
 	}
 
 	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			CreativeTabs CreativeTab, int drop, float Hardness,
+			CreativeTabs CreativeTab, int drop, int count, float Hardness,
 			float Resistance, float LightValue, int HarvestLevel) {
 		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				drop, Hardness, Resistance, CreativeTab, LightValue);
+				drop, count, Hardness, Resistance, CreativeTab, LightValue);
 	}
 
 	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
