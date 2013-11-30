@@ -11,7 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.UIManager;
 
+import mods.periodicraft.block.BlockOre;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityEggInfo;
@@ -46,11 +48,16 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-@Mod(modid="Periodicraft", name="Periodicraft", version="1.1.4")
+@Mod(modid="Periodicraft", name="Periodicraft", version="2.0.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Periodicraft {
+	
+	public static BlockOre BlockCopperOre = new BlockOre(ID.id(), Material.rock, "CopperOre", Periodicraft.tabBlocks, Block.cactus.blockID, 4.4F, 3.2F);
+	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(), Material.rock, "CopperOre", Periodicraft.tabBlocks, Block.cake.blockID, 4.4F, 3.2F);
 
+	
+	
 	//Creative Tabs
 
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
@@ -117,9 +124,7 @@ public class Periodicraft {
 
 		proxy.registerRenderers();
 		FMLLog.log(Level.INFO, "=======================================================Initalizing Periodicraft=======================================================");
-		
-		
-		
+				
 		//CreativeTabs
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabArmor", "en_US", "Armor");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabTools", "en_US", "Tools");

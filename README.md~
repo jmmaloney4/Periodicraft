@@ -13,5 +13,4 @@ git clone https://github.com/Periodicraft-Dev/Periodicraft-Minecraft-Mod.git
 git chechout -b branch-name
 '''
 
-Then make your changes, and submit a pull request. Then we will review your changes and merge the branch.
 
