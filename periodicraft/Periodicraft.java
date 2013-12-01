@@ -59,6 +59,9 @@ public class Periodicraft {
 	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
 			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID, 3,
 			Periodicraft.tabBlocks, 4.4F, 3.2F, 2);
+	
+	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock, "Zinc Ore", Periodicraft.tabBlocks, 5.5F, 3.6F, 2);
+	
 
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
@@ -155,6 +158,7 @@ public class Periodicraft {
 		GameRegistry.registerWorldGenerator(new PeriodicraftWorldGenerator());
 
 		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.3F);
+		
 
 	}
 
