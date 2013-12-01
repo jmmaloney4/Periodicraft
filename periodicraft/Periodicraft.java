@@ -75,6 +75,9 @@ public class Periodicraft {
 	public static ItemIngot ItemNeodymiumIngot = new ItemIngot(ID.id(),
 			"Neodymium Ingot", Periodicraft.tabMaterials);
 
+	public static ItemIngot ItemNickelIngot = new ItemIngot(ID.id(),
+			"Nickel Ingot", Periodicraft.tabMaterials);
+
 	// dust
 	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
 			"Carbon Dust", Periodicraft.tabMaterials);
@@ -120,6 +123,10 @@ public class Periodicraft {
 	public static BlockOre BlockNeodymiumOre = new BlockOre(ID.id(),
 			Material.rock, "Neodymiuum Ore", Periodicraft.tabBlocks, 3.5F,
 			4.9F, 2, 1, EnumBlockRarity.COMMON);
+
+	public static BlockOre BlockNickelOre = new BlockOre(ID.id(),
+			Material.rock, "Nickel Ore", Periodicraft.tabBlocks, 5.2F, 5.6F, 3,
+			1, EnumBlockRarity.RARE);
 
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
@@ -231,6 +238,8 @@ public class Periodicraft {
 		BlockSilverOre.addSmeltingRecipe(ItemSilverIngot, 2.1F);
 
 		BlockNeodymiumOre.addSmeltingRecipe(ItemNeodymiumIngot, 2.1F);
+
+		BlockNickelOre.addSmeltingRecipe(ItemNickelIngot, 2.1F);
 	}
 
 	@EventHandler
