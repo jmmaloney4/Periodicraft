@@ -68,13 +68,19 @@ public class Periodicraft {
 	public static BlockOre BlockOsmiumOre = new BlockOre(ID.id(),
 			Material.rock, "Osmium Ore", Periodicraft.tabBlocks, 9.9F, 6.6F, 3,
 			1, EnumBlockRarity.RARE);
-	
-	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock, "Zinc Ore", Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 1,EnumBlockRarity.SUBTLE);
-	
-	public static BlockOre BlockPlatinumOre = new BlockOre(ID.id(), Material.rock, "Platinum Ore", Periodicraft.tabBlocks, 8.01F, 4.5F, 4, 1, EnumBlockRarity.RARE);
-	
-	public static BlockOre BlockTungstenOre = new BlockOre(ID.id(), Material.rock, "Tungsten Ore", Periodicraft.tabBlocks, 7.2F, 4F, 3, 1, EnumBlockRarity.UNCOMMON);
-	
+
+	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock,
+			"Zinc Ore", Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 1,
+			EnumBlockRarity.SUBTLE);
+
+	public static BlockOre BlockPlatinumOre = new BlockOre(ID.id(),
+			Material.rock, "Platinum Ore", Periodicraft.tabBlocks, 8.01F, 4.5F,
+			4, 1, EnumBlockRarity.RARE);
+
+	public static BlockOre BlockTungstenOre = new BlockOre(ID.id(),
+			Material.rock, "Tungsten Ore", Periodicraft.tabBlocks, 7.2F, 4F, 3,
+			1, EnumBlockRarity.UNCOMMON);
+
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
 		public ItemStack getIconItemStack() {
@@ -167,10 +173,10 @@ public class Periodicraft {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabSpace",
 				"en_US", "Space Travel");
 
-
 		WGen = new PeriodicraftWorldGenerator();
 		GameRegistry.registerWorldGenerator(WGen);
-		GameRegistry.addShapelessRecipe(new ItemStack(Block.cobblestone), new Object[Block.sand, Block.gravel, Block.dirt]);
+		GameRegistry.addShapelessRecipe(new ItemStack(Block.cobblestone),
+				Block.sand, Block.gravel, Block.dirt);
 	}
 
 	@EventHandler

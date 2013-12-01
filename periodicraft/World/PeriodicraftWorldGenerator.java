@@ -21,6 +21,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 
+import mods.periodicraft.Periodicraft;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -58,6 +59,14 @@ public class PeriodicraftWorldGenerator implements IWorldGenerator {
 				int ZCoord = z + random.nextInt(16);
 				(new WorldGenMinable(block.getBlock().blockID, block.getBPV(),
 						1)).generate(world, random, XCoord, YCoord, ZCoord);
+			}
+
+			for (int k = 0; k < 20; k++) {
+				int XCoord = x + random.nextInt(16);
+				int YCoord = random.nextInt(30);
+				int ZCoord = z + random.nextInt(16);
+				(new WorldGenMinable(Periodicraft.BlockCopperOre.blockID, 10, 1))
+						.generate(world, random, XCoord, YCoord, ZCoord);
 			}
 
 		}
