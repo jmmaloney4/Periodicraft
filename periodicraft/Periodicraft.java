@@ -57,6 +57,15 @@ public class Periodicraft {
 	public static ItemIngot ItemBronzeIngot = new ItemIngot(ID.id(),
 			"Bronze Ingot", Periodicraft.tabMaterials);
 
+	public static ItemIngot ItemOsmiumIngot = new ItemIngot(ID.id(),
+			"Osmium Ingot", Periodicraft.tabMaterials);
+
+	public static ItemIngot ItemPlatinumIngot = new ItemIngot(ID.id(),
+			"Platinum Ingot", Periodicraft.tabMaterials);
+
+	public static ItemIngot ItemTungstenIngot = new ItemIngot(ID.id(),
+			"Tungsten Ingot", Periodicraft.tabMaterials);
+
 	// dust
 	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
 			"Carbon Dust", Periodicraft.tabMaterials);
