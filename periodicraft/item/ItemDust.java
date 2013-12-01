@@ -1,4 +1,4 @@
-package mods.periodicraft.client;
+package mods.periodicraft.item;
 
 /*
 Copyright (C) 2013  Jack Maloney
@@ -17,11 +17,19 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import mods.periodicraft.CommonProxy;
+import net.minecraft.creativetab.CreativeTabs;
+import mods.periodicraft.PeriodicraftItem;
 
-public class ClientProxy extends CommonProxy {
-    // Client stuff
-    public void registerRenderers() {
-            // Nothing here as the server doesn't render graphics!
-    }
+public class ItemDust extends PeriodicraftItem {
+
+	public ItemDust(int par1, String UnlocalizedName, CreativeTabs CreativeTab) {
+		super(par1, UnlocalizedName, CreativeTab);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ItemDust(int par1, String UnlocalizedName, int MaxStack, CreativeTabs CreativeTab) {
+		super(par1, UnlocalizedName, MaxStack, CreativeTab);
+		// TODO Auto-generated constructor stub
+	}
+
 }
