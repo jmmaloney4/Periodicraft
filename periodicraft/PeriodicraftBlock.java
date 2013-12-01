@@ -19,6 +19,8 @@ package mods.periodicraft;
 
 import java.util.Random;
 
+import mods.periodicraft.World.EnumBlockRarity;
+import mods.periodicraft.World.WorldGenBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -106,21 +108,36 @@ public abstract class PeriodicraftBlock extends Block {
 		this.dropID = drop;
 	}
 
-	public void addSmeltingRecipe(Item item, int outnum, float xp) {
+	public Block addSmeltingRecipe(Item item, int outnum, float xp) {
 		GameRegistry.addSmelting(this.blockID, new ItemStack(item, outnum), xp);
+		return this;
 	}
 
-	public void addSmeltingRecipe(Block block, int outnum, float xp) {
+	public Block addSmeltingRecipe(Block block, int outnum, float xp) {
 		GameRegistry
 				.addSmelting(this.blockID, new ItemStack(block, outnum), xp);
+		return this;
 	}
 
-	public void addSmeltingRecipe(Item item, float xp) {
+	public Block addSmeltingRecipe(Item item, float xp) {
 		GameRegistry.addSmelting(this.blockID, new ItemStack(item, 1), xp);
+		return this;
 	}
 
-	public void addSmeltingRecipe(Block block, float xp) {
+	public Block addSmeltingRecipe(Block block, float xp) {
 		GameRegistry.addSmelting(this.blockID, new ItemStack(block, 1), xp);
+		return this;
+	}
+
+	public Block addToSurfaceGen(EnumBlockRarity rarity) {
+		Periodicraft.WGen.addToSurfaceGen(new WorldGenBlock(rarity, this));
+		return this;
+	}
+
+	public Block addToSurfaceGen(int VPC, int BPV, int MH) {
+		Periodicraft.WGen
+				.addToSurfaceGen(new WorldGenBlock(VPC, BPV, MH, this));
+		return this;
 	}
 
 }

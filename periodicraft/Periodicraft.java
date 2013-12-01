@@ -2,6 +2,7 @@ package mods.periodicraft;
 
 import java.util.logging.Level;
 
+import mods.periodicraft.World.EnumBlockRarity;
 import mods.periodicraft.World.PeriodicraftWorldGenerator;
 import mods.periodicraft.block.BlockOre;
 import mods.periodicraft.item.ItemDust;
@@ -43,6 +44,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid = "Periodicraft", name = "Periodicraft", version = "2.0.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class Periodicraft {
+
+	public static PeriodicraftWorldGenerator WGen;
 
 	// ingot
 	public static ItemIngot ItemCopperIngot = new ItemIngot(ID.id(),
@@ -152,9 +155,11 @@ public class Periodicraft {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabSpace",
 				"en_US", "Space Travel");
 
-		GameRegistry.registerWorldGenerator(new PeriodicraftWorldGenerator());
+		WGen = new PeriodicraftWorldGenerator();
+		GameRegistry.registerWorldGenerator(WGen);
 
-		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.3F);
+		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.3F)
+				.addToSurfaceGen(EnumBlockRarity.UNCOMMON);
 
 	}
 

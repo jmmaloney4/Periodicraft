@@ -32,8 +32,33 @@ public class WorldGenBlock {
 	int blocksPerVein;
 	int MaxHeight;
 
-	public WorldGenBlock() {
-
+	public WorldGenBlock(int VPC, int BPV, int MH, Block block) {
+		this.block = block;
+		this.blocksPerVein = BPV;
+		this.MaxHeight = MH;
+		this.veinsPerChunk = VPC;
 	}
 
+	public WorldGenBlock(EnumBlockRarity rarity, Block block) {
+		this.block = block;
+		this.blocksPerVein = rarity.BlocksPerVein;
+		this.MaxHeight = rarity.MaxHeight;
+		this.veinsPerChunk = rarity.VeinsPerChunck;
+	}
+
+	public Block getBlock() {
+		return this.block;
+	}
+
+	public int getVPC() {
+		return this.veinsPerChunk;
+	}
+
+	public int getBPV() {
+		return this.blocksPerVein;
+	}
+
+	public int getMH() {
+		return this.MaxHeight;
+	}
 }
