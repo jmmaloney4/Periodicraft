@@ -41,7 +41,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-@Mod(modid = "Periodicraft", name = "Periodicraft", version = "2.0.0")
+@Mod(modid = "Periodicraft", name = "Periodicraft", version = "Beta 1.0.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class Periodicraft {
 	// Ore Generator
@@ -57,11 +57,16 @@ public class Periodicraft {
 
 	// ore
 	public static BlockOre BlockCopperOre = new BlockOre(ID.id(),
-			Material.rock, "Carbon Ore", Periodicraft.tabBlocks, 4.4F, 3.2F, 2);
+			Material.rock, "Carbon Ore", Periodicraft.tabBlocks, 4.4F, 3.2F, 2,
+			1, EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
 			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID, 3,
-			Periodicraft.tabBlocks, 4.4F, 3.2F, 2);
+			Periodicraft.tabBlocks, 4.4F, 3.2F, 2, 1, EnumBlockRarity.SUBTLE);
+
+	public static BlockOre BlockOsmiumOre = new BlockOre(ID.id(),
+			Material.rock, "Osmium Ore", Periodicraft.tabBlocks, 9.9F, 6.6F, 3,
+			1, EnumBlockRarity.RARE);
 
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
@@ -157,10 +162,7 @@ public class Periodicraft {
 
 		WGen = new PeriodicraftWorldGenerator();
 		GameRegistry.registerWorldGenerator(WGen);
-
-		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.3F);
-		BlockCopperOre.addToSurfaceGen(EnumBlockRarity.UNCOMMON);
-
+		GameRegistry.addShapelessRecipe(new ItemStack(Block.cobblestone), new Object[Block.sand, Block.gravel, Block.dirt]);
 	}
 
 	@EventHandler
