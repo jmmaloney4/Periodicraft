@@ -62,7 +62,10 @@ public class Periodicraft {
 	
 	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock, "Zinc Ore", Periodicraft.tabBlocks, 5.5F, 3.6F, 2);
 	
-
+	public static BlockOre BlockPlatinumOre = new BlockOre(ID.id(), Material.rock, "Platinum Ore", Periodicraft.tabBlocks, 8.01F, 4.5F, 4);
+	
+	public static BlockOre BlockTungstenOre = new BlockOre(ID.id(), Material.rock, "Tungsten Ore", Periodicraft.tabBlocks, 7.2F, 4F, 3);
+	
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
 		public ItemStack getIconItemStack() {
