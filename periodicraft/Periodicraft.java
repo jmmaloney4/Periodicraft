@@ -2,6 +2,7 @@ package mods.periodicraft;
 
 import java.util.logging.Level;
 
+import mods.periodicraft.World.PeriodicraftWorldGenerator;
 import mods.periodicraft.block.BlockOre;
 import mods.periodicraft.item.ItemDust;
 import mods.periodicraft.item.ItemIngot;
@@ -152,6 +153,9 @@ public class Periodicraft {
 				"en_US", "Space Travel");
 
 		GameRegistry.registerWorldGenerator(new PeriodicraftWorldGenerator());
+
+		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.3F);
+
 	}
 
 	@EventHandler

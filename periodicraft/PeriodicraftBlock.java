@@ -106,7 +106,7 @@ public abstract class PeriodicraftBlock extends Block {
 		this.dropID = drop;
 	}
 
-	public void addSmeltingRecipe(Item item, int outnum, int xp) {
+	public void addSmeltingRecipe(Item item, int outnum, float xp) {
 		GameRegistry.addSmelting(this.blockID, new ItemStack(item, outnum), xp);
 	}
 
@@ -115,7 +115,7 @@ public abstract class PeriodicraftBlock extends Block {
 				.addSmelting(this.blockID, new ItemStack(block, outnum), xp);
 	}
 
-	public void addSmeltingRecipe(Item item, int xp) {
+	public void addSmeltingRecipe(Item item, float xp) {
 		GameRegistry.addSmelting(this.blockID, new ItemStack(item, 1), xp);
 	}
 

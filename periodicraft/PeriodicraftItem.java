@@ -17,8 +17,11 @@ package mods.periodicraft;
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public abstract class PeriodicraftItem extends Item {
@@ -48,6 +51,22 @@ public abstract class PeriodicraftItem extends Item {
 	@Override
 	public String getUnlocalizedName() {
 		return this.UnlocalizedName;
+	}
+
+	public void addSmeltingRecipe(Item item, int outnum, float xp) {
+		GameRegistry.addSmelting(this.itemID, new ItemStack(item, outnum), xp);
+	}
+
+	public void addSmeltingRecipe(Block block, int outnum, float xp) {
+		GameRegistry.addSmelting(this.itemID, new ItemStack(block, outnum), xp);
+	}
+
+	public void addSmeltingRecipe(Item item, float xp) {
+		GameRegistry.addSmelting(this.itemID, new ItemStack(item, 1), xp);
+	}
+
+	public void addSmeltingRecipe(Block block, float xp) {
+		GameRegistry.addSmelting(this.itemID, new ItemStack(block, 1), xp);
 	}
 
 }
