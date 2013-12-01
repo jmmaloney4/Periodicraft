@@ -1,5 +1,3 @@
-package mods.periodicraft.client;
-
 /*
 Copyright (C) 2013  Jack Maloney
 
@@ -15,13 +13,27 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
-import mods.periodicraft.CommonProxy;
+/**
+ * 
+ */
+package mods.periodicraft.World;
 
-public class ClientProxy extends CommonProxy {
-    // Client stuff
-    public void registerRenderers() {
-            // Nothing here as the server doesn't render graphics!
-    }
+import net.minecraft.block.Block;
+
+/**
+ * @author jack
+ * 
+ */
+public class WorldGenBlock {
+	Block block;
+	int veinsPerChunk;
+	int blocksPerVein;
+	int MaxHeight;
+
+	public WorldGenBlock() {
+
+	}
+
 }

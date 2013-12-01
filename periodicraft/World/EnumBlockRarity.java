@@ -1,5 +1,3 @@
-package mods.periodicraft.client;
-
 /*
 Copyright (C) 2013  Jack Maloney
 
@@ -15,13 +13,29 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
-import mods.periodicraft.CommonProxy;
+/**
+ * 
+ */
+package mods.periodicraft.World;
 
-public class ClientProxy extends CommonProxy {
-    // Client stuff
-    public void registerRenderers() {
-            // Nothing here as the server doesn't render graphics!
-    }
+/**
+ * @author jack
+ * 
+ */
+public enum EnumBlockRarity {
+
+	ULTIMATE(3, 2, 8), RARE(7, 5, 15), SUBTLE(10, 7, 35), UNCOMMON(15, 5, 45), COMMON(
+			20, 10, 55), EXTENSIVE(25, 15, 75);
+
+	int VeinsPerChunck;
+	int BlocksPerVein;
+	int MaxHeight;
+
+	private EnumBlockRarity(int VPC, int BPV, int MH) {
+		this.BlocksPerVein = BPV;
+		this.VeinsPerChunck = VPC;
+		this.MaxHeight = MH;
+	}
 }
