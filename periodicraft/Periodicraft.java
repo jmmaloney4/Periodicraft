@@ -1,5 +1,6 @@
 package mods.periodicraft;
 
+import java.util.Random;
 import java.util.logging.Level;
 
 import mods.periodicraft.World.EnumBlockRarity;
@@ -47,13 +48,21 @@ public class Periodicraft {
 	// Ore Generator
 	public static PeriodicraftWorldGenerator WGen;
 
+	public static Random random = new Random();
+
 	// ingot
 	public static ItemIngot ItemCopperIngot = new ItemIngot(ID.id(),
 			"Copper Ingot", Periodicraft.tabMaterials);
 
+	public static ItemIngot ItemBronzeIngot = new ItemIngot(ID.id(),
+			"Bronze Ingot", Periodicraft.tabMaterials);
+
 	// dust
 	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
 			"Carbon Dust", Periodicraft.tabMaterials);
+
+	public static ItemDust ItemZincDust = new ItemDust(ID.id(), "Zinc Dust",
+			Periodicraft.tabMaterials);
 
 	// ore
 	public static BlockOre BlockCopperOre = new BlockOre(ID.id(),
@@ -61,16 +70,17 @@ public class Periodicraft {
 			1, EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
-			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID, 3,
-
-			Periodicraft.tabBlocks, 4.4F, 3.2F, 2, 1, EnumBlockRarity.SUBTLE);
+			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID,
+			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 4.4F, 3.2F, 2, 1,
+			EnumBlockRarity.SUBTLE);
 
 	public static BlockOre BlockOsmiumOre = new BlockOre(ID.id(),
 			Material.rock, "Osmium Ore", Periodicraft.tabBlocks, 9.9F, 6.6F, 3,
 			1, EnumBlockRarity.RARE);
 
 	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock,
-			"Zinc Ore", Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 1,
+			"Zinc Ore", Periodicraft.ItemZincDust.itemID,
+			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 1,
 			EnumBlockRarity.SUBTLE);
 
 	public static BlockOre BlockPlatinumOre = new BlockOre(ID.id(),
