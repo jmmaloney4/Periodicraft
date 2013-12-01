@@ -8,9 +8,6 @@ import mods.periodicraft.item.ItemIngot;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityEggInfo;
-import net.minecraft.entity.EntityList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.FMLLog;
@@ -163,13 +160,6 @@ public class Periodicraft {
 		FMLLog.log(
 				Level.INFO,
 				"=======================================================Starting Periodicraft=======================================================");
-	}
-
-	public void Egg(Class<? extends Entity> entity, int ID, int PrimaryColor,
-			int SecondaryColor) {
-		EntityList.IDtoClassMapping.put(ID, entity);
-		EntityList.entityEggs.put(ID, new EntityEggInfo(ID, PrimaryColor,
-				SecondaryColor));
 	}
 
 }

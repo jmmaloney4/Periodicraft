@@ -22,6 +22,8 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -102,6 +104,23 @@ public abstract class PeriodicraftBlock extends Block {
 	protected void setDropAndCount(int drop, int count) {
 		this.dropCount = count;
 		this.dropID = drop;
+	}
+
+	public void addSmeltingRecipe(Item item, int outnum, int xp) {
+		GameRegistry.addSmelting(this.blockID, new ItemStack(item, outnum), xp);
+	}
+
+	public void addSmeltingRecipe(Block block, int outnum, float xp) {
+		GameRegistry
+				.addSmelting(this.blockID, new ItemStack(block, outnum), xp);
+	}
+
+	public void addSmeltingRecipe(Item item, int xp) {
+		GameRegistry.addSmelting(this.blockID, new ItemStack(item, 1), xp);
+	}
+
+	public void addSmeltingRecipe(Block block, float xp) {
+		GameRegistry.addSmelting(this.blockID, new ItemStack(block, 1), xp);
 	}
 
 }
