@@ -66,6 +66,12 @@ public class Periodicraft {
 	public static ItemIngot ItemTungstenIngot = new ItemIngot(ID.id(),
 			"Tungsten Ingot", Periodicraft.tabMaterials);
 
+	public static ItemIngot ItemTinIngot = new ItemIngot(ID.id(), "Tin Ingot",
+			Periodicraft.tabMaterials);
+
+	public static ItemIngot ItemSilverIngot = new ItemIngot(ID.id(),
+			"Silver Ingot", Periodicraft.tabMaterials);
+
 	// dust
 	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
 			"Carbon Dust", Periodicraft.tabMaterials);
@@ -99,6 +105,14 @@ public class Periodicraft {
 	public static BlockOre BlockTungstenOre = new BlockOre(ID.id(),
 			Material.rock, "Tungsten Ore", Periodicraft.tabBlocks, 7.2F, 4F, 3,
 			1, EnumBlockRarity.UNCOMMON);
+
+	public static BlockOre BlockTinOre = new BlockOre(ID.id(), Material.rock,
+			"Tin Ore", Periodicraft.tabBlocks, 5.6F, 7F, 2, 1,
+			EnumBlockRarity.UNCOMMON);
+
+	public static BlockOre BlockSilverOre = new BlockOre(ID.id(),
+			Material.rock, "Silver Ore", Periodicraft.tabBlocks, 4.1F, 9.8F, 3,
+			1, EnumBlockRarity.RARE);
 
 	// Creative Tabs
 	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
@@ -196,6 +210,18 @@ public class Periodicraft {
 		GameRegistry.registerWorldGenerator(WGen);
 		GameRegistry.addShapelessRecipe(new ItemStack(Block.cobblestone),
 				Block.sand, Block.gravel, Block.dirt);
+
+		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.1F);
+
+		BlockPlatinumOre.addSmeltingRecipe(ItemPlatinumIngot, 2.1F);
+
+		BlockTungstenOre.addSmeltingRecipe(ItemTungstenIngot, 2.1F);
+
+		BlockOsmiumOre.addSmeltingRecipe(ItemOsmiumIngot, 2.1F);
+
+		BlockTinOre.addSmeltingRecipe(ItemTinIngot, 2.1F);
+
+		BlockSilverOre.addSmeltingRecipe(ItemSilverIngot, 2.1F);
 	}
 
 	@EventHandler
