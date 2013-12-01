@@ -17,11 +17,13 @@ package mods.periodicraft.World;
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class PeriodicraftWorldGenerator implements IWorldGenerator {
@@ -45,6 +47,20 @@ public class PeriodicraftWorldGenerator implements IWorldGenerator {
 	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
+
+		Iterator<WorldGenBlock> iter = SurfaceGenList.iterator();
+		while (iter.hasNext()) {
+			WorldGenBlock block = iter.next();
+
+			for (int k = 0; k < block.getVPC(); k++) {
+				int XCoord = x + random.nextInt(16);
+				int YCoord = random.nextInt(block.getMH());
+				int ZCoord = z + random.nextInt(16);
+				(new WorldGenMinable(block.getBlock().blockID, block.getBPV(),
+						1)).generate(world, random, XCoord, YCoord, ZCoord);
+			}
+
+		}
 
 	}
 
