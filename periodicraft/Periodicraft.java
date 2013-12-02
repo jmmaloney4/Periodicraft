@@ -117,9 +117,9 @@ public class Periodicraft {
 	  
 	  public static BlockOre BlockTungstenOre = Periodicraft.CreateOreBlock("Tungsten Ore", 4.5F, 4.6F, 3, LightValue, LightOpacity);
 	  
-	  public static BlockOre BlockTinOre =
+	  public static BlockOre BlockTinOre = Periodicraft.CreateOreBlock("Tin Ore", 5.1F, 4.3F, 3, LightValue, LightOpacity);
 	  
-	  public static BlockOre BlockSilverOre =
+	  public static BlockOre BlockSilverOre = Periodicraft.CreateOreBlock("Silver Ore", 3.2F, 3.9F, 3, LightValue, LightOpacity);
 	  
 	  public static BlockOre BlockNeodymiumOre =
 	  
