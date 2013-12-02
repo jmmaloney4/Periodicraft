@@ -245,10 +245,10 @@ public class Periodicraft {
 		return block;
 	}
 
-	//public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
-		//	String UnlocalizedName) {
+	public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
+			String UnlocalizedName) {
 
-	//}
+	}
 	
 	public static ItemIngot CreateItemIngot(String UnlocalizedName, CreativeTabs CreativeTab) {
 		ItemIngot ingot = new ItemIngot(ID.id(), UnlocalizedName, CreativeTab);
