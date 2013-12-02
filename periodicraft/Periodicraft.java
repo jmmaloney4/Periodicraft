@@ -3,6 +3,7 @@ package mods.periodicraft;
 import java.util.Random;
 import java.util.logging.Level;
 
+import mods.periodicraft.World.EnumBlockRarity;
 import mods.periodicraft.World.PeriodicraftWorldGenerator;
 import mods.periodicraft.block.BlockOre;
 import mods.periodicraft.item.ItemDust;
@@ -117,7 +118,7 @@ public class Periodicraft {
 	  
 	  public static BlockOre BlockTungstenOre = Periodicraft.CreateOreBlock("Tungsten Ore", 4.5F, 4.6F, 3, LightValue, LightOpacity);
 	  
-	  public static BlockOre BlockTinOre =
+	  public static BlockOre BlockTinOre = 
 	  
 	  public static BlockOre BlockSilverOre =
 	  
@@ -219,16 +220,16 @@ public class Periodicraft {
 
 	public static BlockOre CreateOreBlock(String UnlocalizedName,
 			float Hardness, float Resistance, int HarvestLevel,
-			float LightValue, int LightOpacity, int Drop, int count) {
+			float LightValue, int LightOpacity, int dimension, EnumBlockRarity rarity,int Drop, int count) {
 		BlockOre block = Periodicraft.CreateOreBlock(UnlocalizedName, Hardness,
-				Resistance, HarvestLevel, LightValue, LightOpacity);
+				Resistance, HarvestLevel, LightValue, LightOpacity, dimension, rarity);
 		block.setDropAndCount(Drop, count);
-
+		return block;
 	}
 
 	public static BlockOre CreateOreBlock(String UnlocalizedName,
 			float Hardness, float Resistance, int HarvestLevel,
-			float LightValue, int LightOpacity) {
+			float LightValue, int LightOpacity, int dimension, EnumBlockRarity rarity) {
 		BlockOre block = new BlockOre(ID.id());
 		block.setUnlocalizedName(UnlocalizedName).setHardness(Hardness)
 				.setResistance(Resistance).setCreativeTab(
@@ -238,11 +239,19 @@ public class Periodicraft {
 		MinecraftForge.setBlockHarvestLevel(block, "pickaxe", HarvestLevel);
 		LanguageRegistry.addName(block, UnlocalizedName);
 		GameRegistry.registerBlock(block, UnlocalizedName);
+		block.addToSurfaceGen(rarity);
 		block.setDropAndCount(block.blockID, 1);
+		return block;
 	}
 
 	public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
 			String UnlocalizedName) {
 
+	}
+	
+	public static ItemIngot CreateItemIngot(String UnlocalizedName, CreativeTabs CreativeTab) {
+		ItemIngot ingot = new ItemIngot(ID.id(), UnlocalizedName, CreativeTab);
+		ingot.setTextureName("periodicraft:" + UnlocalizedName);
+		return ingot;
 	}
 }
