@@ -102,27 +102,27 @@ public class Periodicraft {
 
 	// ore
 	public static BlockOre BlockCopperOre = Periodicraft.CreateOreBlock(
-			"Copper Ore", 3.5F, 4.5F, 1, LightValue, LightOpacity);
+			"Copper Ore", 3.5F, 4.5F, 1, LightValue, LightOpacity, 0, EnumBlockRarity.RARE);
 
 	public static BlockOre BlockCarbonOre = Periodicraft.CreateOreBlock(
-			"Carbon Ore", 5.4F, 4.3F, 2, LightValue, LightOpacity);
+			"Carbon Ore", 5.4F, 4.3F, 2, LightValue, LightOpacity, 0, EnumBlockRarity.SUBTLE);
 
 	public static BlockOre BlockOsmiumOre = Periodicraft.CreateOreBlock(
-			"Osmium Ore", 8.7F, 5.4F, 4, LightValue, LightOpacity);
+			"Osmium Ore", 8.7F, 5.4F, 4, LightValue, LightOpacity, 0, EnumBlockRarity.UNCOMMON);
 	
 	  public static BlockOre BlockZincOre =
 	  Periodicraft.CreateOreBlock("Zinc Ore", 5.5F, 3.2F,
-	  3, LightValue, LightOpacity);
+	  3, LightValue, LightOpacity, 0, EnumBlockRarity.SUBTLE);
 	  
-	  public static BlockOre BlockPlatinumOre = Periodicraft.CreateOreBlock("Platinum Ore", 7.5F, 5.5F, 3, LightValue, LightOpacity);
+	  public static BlockOre BlockPlatinumOre = Periodicraft.CreateOreBlock("Platinum Ore", 7.5F, 5.5F, 3, LightValue, LightOpacity, 0, EnumBlockRarity.RARE);
 	  
-	  public static BlockOre BlockTungstenOre = Periodicraft.CreateOreBlock("Tungsten Ore", 4.5F, 4.6F, 3, LightValue, LightOpacity);
+	  public static BlockOre BlockTungstenOre = Periodicraft.CreateOreBlock("Tungsten Ore", 4.5F, 4.6F, 3, LightValue, LightOpacity, 0, EnumBlockRarity.RARE);
 	  
-	  public static BlockOre BlockTinOre = Periodicraft.CreateOreBlock("Tin Ore", 5.1F, 4.3F, 3, LightValue, LightOpacity);
+	  public static BlockOre BlockTinOre = Periodicraft.CreateOreBlock("Tin Ore", 5.1F, 4.3F, 3, LightValue, LightOpacity, 0, EnumBlockRarity.SUBTLE);
 	  
-	  public static BlockOre BlockSilverOre = Periodicraft.CreateOreBlock("Silver Ore", 3.2F, 3.9F, 3, LightValue, LightOpacity);
+	  public static BlockOre BlockSilverOre = Periodicraft.CreateOreBlock("Silver Ore", 3.2F, 3.9F, 3, LightValue, LightOpacity, 0, EnumBlockRarity.UNCOMMON);
 	  
-	  public static BlockOre BlockNeodymiumOre =
+	  public static BlockOre BlockNeodymiumOre = Periodicraft.CreateOreBlock("Neodymium Ore", 4.6F, 4.5F, 3, LightValue, LightOpacity, 0, EnumBlockRarity.COMMON);
 	  
 	  public static BlockOre BlockNickelOre =
 	  
