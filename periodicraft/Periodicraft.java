@@ -83,6 +83,9 @@ public class Periodicraft {
 
 	public static ItemIngot ItemBoronIngot = new ItemIngot(ID.id(),
 			"Boron Ingot", Periodicraft.tabMaterials);
+
+	public static ItemIngot ItemBerylliumIngot = new Itemingot(ID.id(),
+			"Beryllium Ingot", Periodicraft.tabMaterials);
 	// dust
 	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
 			"Carbon Dust", Periodicraft.tabMaterials);
@@ -144,6 +147,9 @@ public class Periodicraft {
 			"Boron Ore", Periodicraft.tabBlocks, 2.5F, 2.9F, 2, 0,
 			EnumBlockRarity.RARE);
 
+	public static BlockOre BlockBerylliumOre = new BlockOre(ID.id(),
+			Material.rock, "Beryllium Ore", Periodicraft.tabBlocks, 4.1F, 5.6F,
+			3, 0, EnumBlockRarity.UNCOMMON);
 	// Creative Tabs
 
 	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
@@ -215,6 +221,7 @@ public class Periodicraft {
 		BlockNeodymiumOre.addSmeltingRecipe(ItemNeodymiumIngot, 4.1F);
 		BlockNickelOre.addSmeltingRecipe(ItemNickelIngot, 2.1F);
 		BlockBoronOre.addSmeltingRecipe(ItemBoronIngot, 2.1F);
+		BlockBerylliumOre.addSmeltingRecipe(ItemBerylliumIngot, 2.1F);
 		GameRegistry.addShapelessRecipe(new ItemStack(
 				Periodicraft.ItemMagnesiumIngot),
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust,
