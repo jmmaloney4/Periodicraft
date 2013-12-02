@@ -219,6 +219,7 @@ public class Periodicraft {
 				Periodicraft.ItemMagnesiumIngot),
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust,
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust);
+		BlockBoronOre.setCreativeTab(Periodicraft.tabBlocks);
 	}
 
 	@EventHandler
