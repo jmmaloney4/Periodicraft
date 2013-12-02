@@ -67,22 +67,34 @@ public class PeriodicraftWorldGenerator implements IWorldGenerator {
 
 	private void generateEnd(World world, Random random, int x, int z) {
 
-		/*
-		 * for(int k = 0; k < 20; k++) { int XCoord = x + random.nextInt(16);
-		 * int YCoord = random.nextInt(30); int ZCoord = z + random.nextInt(16);
-		 * (new WorldGenMinable(Periodicraft.BlockCopperOre.blockID, 10,
-		 * 1)).generate(world, random, XCoord, YCoord, ZCoord); }
-		 */
+		Iterator<WorldGenBlock> iter = EndGenList.iterator();
+		while (iter.hasNext()) {
+			WorldGenBlock block = iter.next();
+
+			for (int k = 0; k < block.getVPC(); k++) {
+				int XCoord = x + random.nextInt(16);
+				int YCoord = random.nextInt(block.getMH());
+				int ZCoord = z + random.nextInt(16);
+				(new WorldGenMinable(block.getBlock().blockID, block.getBPV(),
+						1)).generate(world, random, XCoord, YCoord, ZCoord);
+			}
+		}
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
 
-		/*
-		 * for(int k = 0; k < 20; k++) { int XCoord = x + random.nextInt(16);
-		 * int YCoord = random.nextInt(30); int ZCoord = z + random.nextInt(16);
-		 * (new WorldGenMinable(Periodicraft.BlockCopperOre.blockID, 10,
-		 * 1)).generate(world, random, XCoord, YCoord, ZCoord); }
-		 */
+		Iterator<WorldGenBlock> iter = NetherGenList.iterator();
+		while (iter.hasNext()) {
+			WorldGenBlock block = iter.next();
+
+			for (int k = 0; k < block.getVPC(); k++) {
+				int XCoord = x + random.nextInt(16);
+				int YCoord = random.nextInt(block.getMH());
+				int ZCoord = z + random.nextInt(16);
+				(new WorldGenMinable(block.getBlock().blockID, block.getBPV(),
+						1)).generate(world, random, XCoord, YCoord, ZCoord);
+			}
+		}
 	}
 
 	public void addToSurfaceGen(WorldGenBlock block) {
