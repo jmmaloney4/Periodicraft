@@ -145,17 +145,6 @@ public class Periodicraft {
 			EnumBlockRarity.RARE);
 
 	// Creative Tabs
-	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
-
-	public static CreativeTabs tabArmor = new CreativeTabs("tabArmor") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
 
 	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
 		public ItemStack getIconItemStack() {
@@ -166,30 +155,6 @@ public class Periodicraft {
 	public static CreativeTabs tabMaterials = new CreativeTabs("tabMaterials") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
-
-	public static CreativeTabs tabFood = new CreativeTabs("tabFood") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
-
-	public static CreativeTabs tabWeapons = new CreativeTabs("tabWeapons") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
-
-	public static CreativeTabs tabSpace = new CreativeTabs("tabSpace") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
-
-	public static CreativeTabs tabUtility = new CreativeTabs("tabUtility") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Block.chest, 1, 0);
 		}
 	};
 
