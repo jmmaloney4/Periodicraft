@@ -96,52 +96,52 @@ public class Periodicraft {
 	// ore
 	public static BlockOre BlockCopperOre = new BlockOre(ID.id(),
 			Material.rock, "Carbon Ore", Periodicraft.tabBlocks, 4.4F, 3.2F, 2,
-			1, EnumBlockRarity.UNCOMMON);
+			0, EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
 			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID,
-			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 4.4F, 3.2F, 2, 1,
+			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 4.4F, 3.2F, 2, 0,
 			EnumBlockRarity.SUBTLE);
 
 	public static BlockOre BlockOsmiumOre = new BlockOre(ID.id(),
 			Material.rock, "Osmium Ore", Periodicraft.tabBlocks, 9.9F, 6.6F, 3,
-			1, EnumBlockRarity.RARE);
+			0, EnumBlockRarity.RARE);
 
 	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock,
 			"Zinc Ore", Periodicraft.ItemZincDust.itemID,
-			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 1,
+			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 0,
 			EnumBlockRarity.SUBTLE);
 
 	public static BlockOre BlockPlatinumOre = new BlockOre(ID.id(),
 			Material.rock, "Platinum Ore", Periodicraft.tabBlocks, 8.01F, 4.5F,
-			4, 1, EnumBlockRarity.RARE);
+			4, 0, EnumBlockRarity.RARE);
 
 	public static BlockOre BlockTungstenOre = new BlockOre(ID.id(),
 			Material.rock, "Tungsten Ore", Periodicraft.tabBlocks, 7.2F, 4F, 3,
-			1, EnumBlockRarity.UNCOMMON);
+			0, EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockTinOre = new BlockOre(ID.id(), Material.rock,
-			"Tin Ore", Periodicraft.tabBlocks, 5.6F, 7F, 2, 1,
+			"Tin Ore", Periodicraft.tabBlocks, 5.6F, 7F, 2, 0,
 			EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockSilverOre = new BlockOre(ID.id(),
 			Material.rock, "Silver Ore", Periodicraft.tabBlocks, 4.1F, 9.8F, 3,
-			1, EnumBlockRarity.RARE);
+			0, EnumBlockRarity.RARE);
 
 	public static BlockOre BlockNeodymiumOre = new BlockOre(ID.id(),
 			Material.rock, "Neodymiuum Ore", Periodicraft.tabBlocks, 3.5F,
-			4.9F, 2, 1, EnumBlockRarity.COMMON);
+			4.9F, 2, 0, EnumBlockRarity.COMMON);
 
 	public static BlockOre BlockNickelOre = new BlockOre(ID.id(),
 			Material.rock, "Nickel Ore", Periodicraft.tabBlocks, 5.2F, 5.6F, 3,
-			1, EnumBlockRarity.RARE);
+			0, EnumBlockRarity.RARE);
 
 	public static BlockOre BlockMagnesiumOre = new BlockOre(ID.id(),
 			Material.rock, "Magnesium Ore", Periodicraft.tabBlocks, 2.9F, 3.1F,
-			2, 1, EnumBlockRarity.UNCOMMON);
+			2, 0, EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockBoronOre = new BlockOre(ID.id(), Material.rock,
-			"Boron Ore", Periodicraft.tabBlocks, 2.5F, 2.9F, 2, 1,
+			"Boron Ore", Periodicraft.tabBlocks, 2.5F, 2.9F, 2, 0,
 			EnumBlockRarity.RARE);
 
 	// Creative Tabs
