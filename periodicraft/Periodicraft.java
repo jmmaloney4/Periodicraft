@@ -249,7 +249,7 @@ public class Periodicraft {
 		BlockSilverOre.addSmeltingRecipe(ItemSilverIngot, 2.1F);
 		BlockNeodymiumOre.addSmeltingRecipe(ItemNeodymiumIngot, 4.1F);
 		BlockNickelOre.addSmeltingRecipe(ItemNickelIngot, 2.1F);
-		BlockBoronOre.addSmeltingRecipe(ItemBoronIngot, 2.1F)
+		BlockBoronOre.addSmeltingRecipe(ItemBoronIngot, 2.1F);
 		GameRegistry.addShapelessRecipe(new ItemStack(
 				Periodicraft.ItemMagnesiumIngot),
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust,
