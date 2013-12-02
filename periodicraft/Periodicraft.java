@@ -129,7 +129,8 @@ public class Periodicraft {
 	  public static BlockOre BlockMagnesiumOre =
 	  
 	  public static BlockOre BlockBoronOre =
-	 public static BlockOre BlockBerylliumOre =
+	  
+	  public static BlockOre BlockBerylliumOre =
 	// Creative Tabs
 
 	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
@@ -220,7 +221,7 @@ public class Periodicraft {
 
 	public static BlockOre CreateOreBlock(String UnlocalizedName,
 			float Hardness, float Resistance, int HarvestLevel,
-			float LightValue, int LightOpacity, int dimension, EnumBlockRarity rarity,int Drop, int count) {
+			float LightValue, int LightOpacity, int dimension, EnumBlockRarity rarity, int Drop, int count) {
 		BlockOre block = Periodicraft.CreateOreBlock(UnlocalizedName, Hardness,
 				Resistance, HarvestLevel, LightValue, LightOpacity, dimension, rarity);
 		block.setDropAndCount(Drop, count);
@@ -244,10 +245,10 @@ public class Periodicraft {
 		return block;
 	}
 
-	public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
-			String UnlocalizedName) {
+	//public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
+		//	String UnlocalizedName) {
 
-	}
+	//}
 	
 	public static ItemIngot CreateItemIngot(String UnlocalizedName, CreativeTabs CreativeTab) {
 		ItemIngot ingot = new ItemIngot(ID.id(), UnlocalizedName, CreativeTab);
