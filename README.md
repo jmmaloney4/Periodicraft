@@ -1,5 +1,5 @@
-Periodicraft Minecraft Mod
-==========================
+**Periodicraft Minecraft Mod**
+
 "Elemental Minecraft"
 ==========================
 
