@@ -18,48 +18,11 @@ package mods.periodicraft.block;
  */
 
 import mods.periodicraft.PeriodicraftBlock;
-import mods.periodicraft.World.EnumBlockRarity;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockOre extends PeriodicraftBlock {
 
-	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			CreativeTabs CreativeTab, float Hardness, float Resistance,
-			int HarvestLevel, int dimension, EnumBlockRarity rarity) {
-		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				Hardness, Resistance, CreativeTab);
-		switch (dimension) {
-		case 1:
-
-		case 0:
-		case -1:
-
-		}
-	}
-
-	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			CreativeTabs CreativeTab, float Hardness, float Resistance,
-			float LightValue, int HarvestLevel, int dimension,
-			EnumBlockRarity rarity) {
-		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				Hardness, Resistance, CreativeTab, LightValue);
-	}
-
-	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			int drop, int count, CreativeTabs CreativeTab, float Hardness,
-			float Resistance, float LightValue, int HarvestLevel,
-			int dimension, EnumBlockRarity rarity) {
-		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				Hardness, Resistance, CreativeTab, LightValue);
-	}
-
-	public BlockOre(int par1, Material par2Material, String UnlocalizedName,
-			int drop, int count, CreativeTabs CreativeTab, float Hardness,
-			float Resistance, int HarvestLevel, int dimension,
-			EnumBlockRarity rarity) {
-		super(par1, par2Material, "pickaxe", HarvestLevel, UnlocalizedName,
-				Hardness, Resistance, CreativeTab);
-
+	public BlockOre(int par1) {
+		super(par1, Material.rock);
 	}
 }

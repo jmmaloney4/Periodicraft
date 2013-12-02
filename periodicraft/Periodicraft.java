@@ -3,7 +3,6 @@ package mods.periodicraft;
 import java.util.Random;
 import java.util.logging.Level;
 
-import mods.periodicraft.World.EnumBlockRarity;
 import mods.periodicraft.World.PeriodicraftWorldGenerator;
 import mods.periodicraft.block.BlockOre;
 import mods.periodicraft.item.ItemDust;
@@ -13,6 +12,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -50,6 +50,9 @@ public class Periodicraft {
 
 	public static Random random = new Random();
 
+	protected static final int LightValue = 0;
+	protected static final int LightOpacity = 0;
+
 	// ingot
 	public static ItemIngot ItemCopperIngot = new ItemIngot(ID.id(),
 			"Copper Ingot", Periodicraft.tabMaterials);
@@ -84,7 +87,7 @@ public class Periodicraft {
 	public static ItemIngot ItemBoronIngot = new ItemIngot(ID.id(),
 			"Boron Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemBerylliumIngot = new Itemingot(ID.id(),
+	public static ItemIngot ItemBerylliumIngot = new ItemIngot(ID.id(),
 			"Beryllium Ingot", Periodicraft.tabMaterials);
 	// dust
 	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
@@ -97,59 +100,35 @@ public class Periodicraft {
 			"Magnesium Dust", Periodicraft.tabMaterials);
 
 	// ore
-	public static BlockOre BlockCopperOre = new BlockOre(ID.id(),
-			Material.rock, "Carbon Ore", Periodicraft.tabBlocks, 4.4F, 3.2F, 2,
-			0, EnumBlockRarity.UNCOMMON);
+	public static BlockOre BlockCopperOre = Periodicraft.CreateOreBlock(
+			"Copper Ore", 3.5F, 4.5F, 1, LightValue, LightOpacity);
 
-	public static BlockOre BlockCarbonOre = new BlockOre(ID.id(),
-			Material.rock, "Copper Ore", Periodicraft.ItemCarbonDust.itemID,
-			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 4.4F, 3.2F, 2, 0,
-			EnumBlockRarity.SUBTLE);
+	public static BlockOre BlockCarbonOre = Periodicraft.CreateOreBlock(
+			"Carbon Ore", 5.4F, 4.3F, 2, LightValue, LightOpacity);
 
-	public static BlockOre BlockOsmiumOre = new BlockOre(ID.id(),
-			Material.rock, "Osmium Ore", Periodicraft.tabBlocks, 9.9F, 6.6F, 3,
-			0, EnumBlockRarity.RARE);
-
-	public static BlockOre BlockZincOre = new BlockOre(ID.id(), Material.rock,
-			"Zinc Ore", Periodicraft.ItemZincDust.itemID,
-			(random.nextInt(3) + 3), Periodicraft.tabBlocks, 5.5F, 3.6F, 2, 0,
-			EnumBlockRarity.SUBTLE);
-
-	public static BlockOre BlockPlatinumOre = new BlockOre(ID.id(),
-			Material.rock, "Platinum Ore", Periodicraft.tabBlocks, 8.01F, 4.5F,
-			4, 0, EnumBlockRarity.RARE);
-
-	public static BlockOre BlockTungstenOre = new BlockOre(ID.id(),
-			Material.rock, "Tungsten Ore", Periodicraft.tabBlocks, 7.2F, 4F, 3,
-			0, EnumBlockRarity.UNCOMMON);
-
-	public static BlockOre BlockTinOre = new BlockOre(ID.id(), Material.rock,
-			"Tin Ore", Periodicraft.tabBlocks, 5.6F, 7F, 2, 0,
-			EnumBlockRarity.UNCOMMON);
-
-	public static BlockOre BlockSilverOre = new BlockOre(ID.id(),
-			Material.rock, "Silver Ore", Periodicraft.tabBlocks, 4.1F, 9.8F, 3,
-			0, EnumBlockRarity.RARE);
-
-	public static BlockOre BlockNeodymiumOre = new BlockOre(ID.id(),
-			Material.rock, "Neodymiuum Ore", Periodicraft.tabBlocks, 3.5F,
-			4.9F, 2, 0, EnumBlockRarity.COMMON);
-
-	public static BlockOre BlockNickelOre = new BlockOre(ID.id(),
-			Material.rock, "Nickel Ore", Periodicraft.tabBlocks, 5.2F, 5.6F, 3,
-			0, EnumBlockRarity.RARE);
-
-	public static BlockOre BlockMagnesiumOre = new BlockOre(ID.id(),
-			Material.rock, "Magnesium Ore", Periodicraft.tabBlocks, 2.9F, 3.1F,
-			2, 0, EnumBlockRarity.UNCOMMON);
-
-	public static BlockOre BlockBoronOre = new BlockOre(ID.id(), Material.rock,
-			"Boron Ore", Periodicraft.tabBlocks, 2.5F, 2.9F, 2, 0,
-			EnumBlockRarity.RARE);
-
-	public static BlockOre BlockBerylliumOre = new BlockOre(ID.id(),
-			Material.rock, "Beryllium Ore", Periodicraft.tabBlocks, 4.1F, 5.6F,
-			3, 0, EnumBlockRarity.UNCOMMON);
+	public static BlockOre BlockOsmiumOre = Periodicraft.CreateOreBlock(
+			"Osmium Ore", 8.7F, 5.4F, 4, LightValue, LightOpacity);
+	
+	  public static BlockOre BlockZincOre =
+	  Periodicraft.CreateOreBlock("Zinc Ore", 5.5F, 3.2F,
+	  3, LightValue, LightOpacity);
+	  
+	  public static BlockOre BlockPlatinumOre = Periodicraft.CreateOreBlock("Platinum Ore", 7.5F, 5.5F, 3, LightValue, LightOpacity);
+	  
+	  public static BlockOre BlockTungstenOre = Periodicraft.CreateOreBlock("Tungsten Ore", 4.5F, 4.6F, 3, LightValue, LightOpacity);
+	  
+	  public static BlockOre BlockTinOre =
+	  
+	  public static BlockOre BlockSilverOre =
+	  
+	  public static BlockOre BlockNeodymiumOre =
+	  
+	  public static BlockOre BlockNickelOre =
+	  
+	  public static BlockOre BlockMagnesiumOre =
+	  
+	  public static BlockOre BlockBoronOre =
+	 public static BlockOre BlockBerylliumOre =
 	// Creative Tabs
 
 	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
@@ -169,7 +148,8 @@ public class Periodicraft {
 	public static Periodicraft instance;
 
 	// Says where the client and server 'proxy' code is loaded.
-	@SidedProxy(clientSide = "mods.periodicraft.client.ClientProxy", serverSide = "mods.periodicraft.CommonProxy")
+	@SidedProxy(clientSide = "mods.periodicraft.client.ClientProxy",
+			serverSide = "mods.periodicraft.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler
@@ -237,4 +217,32 @@ public class Periodicraft {
 				"=======================================================Starting Periodicraft=======================================================");
 	}
 
+	public static BlockOre CreateOreBlock(String UnlocalizedName,
+			float Hardness, float Resistance, int HarvestLevel,
+			float LightValue, int LightOpacity, int Drop, int count) {
+		BlockOre block = Periodicraft.CreateOreBlock(UnlocalizedName, Hardness,
+				Resistance, HarvestLevel, LightValue, LightOpacity);
+		block.setDropAndCount(Drop, count);
+
+	}
+
+	public static BlockOre CreateOreBlock(String UnlocalizedName,
+			float Hardness, float Resistance, int HarvestLevel,
+			float LightValue, int LightOpacity) {
+		BlockOre block = new BlockOre(ID.id());
+		block.setUnlocalizedName(UnlocalizedName).setHardness(Hardness)
+				.setResistance(Resistance).setCreativeTab(
+						Periodicraft.tabBlocks).setLightValue(LightValue)
+				.setTextureName("periodicraft:" + UnlocalizedName)
+				.setLightOpacity(LightOpacity);
+		MinecraftForge.setBlockHarvestLevel(block, "pickaxe", HarvestLevel);
+		LanguageRegistry.addName(block, UnlocalizedName);
+		GameRegistry.registerBlock(block, UnlocalizedName);
+		block.setDropAndCount(block.blockID, 1);
+	}
+
+	public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
+			String UnlocalizedName) {
+
+	}
 }
