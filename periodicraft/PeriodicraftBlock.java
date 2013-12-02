@@ -78,6 +78,16 @@ public abstract class PeriodicraftBlock extends Block {
 		return this;
 	}
 
+	public Block addToNetherGen(EnumBlockRarity rarity) {
+		Periodicraft.WGen.addToNetherGen(new WorldGenBlock(rarity, this));
+		return this;
+	}
+
+	public Block addToEndGen(EnumBlockRarity rarity) {
+		Periodicraft.WGen.addToEndGen(new WorldGenBlock(rarity, this));
+		return this;
+	}
+
 	// public Block addToSurfaceGen(int VPC, int BPV, int MH) {
 	// Periodicraft.WGen
 	// .addToSurfaceGen(new WorldGenBlock(VPC, BPV, MH, this));
