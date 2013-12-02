@@ -236,19 +236,12 @@ public class Periodicraft {
 				Block.sand, Block.gravel, Block.dirt);
 
 		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.1F);
-
-		BlockPlatinumOre.addSmeltingRecipe(ItemPlatinumIngot, 2.1F);
-
+		BlockPlatinumOre.addSmeltingRecipe(ItemPlatinumIngot, 5.1F);
 		BlockTungstenOre.addSmeltingRecipe(ItemTungstenIngot, 2.1F);
-
-		BlockOsmiumOre.addSmeltingRecipe(ItemOsmiumIngot, 2.1F);
-
+		BlockOsmiumOre.addSmeltingRecipe(ItemOsmiumIngot, 6.3F);
 		BlockTinOre.addSmeltingRecipe(ItemTinIngot, 2.1F);
-
 		BlockSilverOre.addSmeltingRecipe(ItemSilverIngot, 2.1F);
-
-		BlockNeodymiumOre.addSmeltingRecipe(ItemNeodymiumIngot, 2.1F);
-
+		BlockNeodymiumOre.addSmeltingRecipe(ItemNeodymiumIngot, 4.1F);
 		BlockNickelOre.addSmeltingRecipe(ItemNickelIngot, 2.1F);
 
 		GameRegistry.addShapelessRecipe(new ItemStack(
