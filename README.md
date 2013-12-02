@@ -1,7 +1,6 @@
-**Periodicraft Minecraft Mod**
-
-"Elemental Minecraft"
+Periodicraft Minecraft Mod
 ==========================
+# **_"Elemental Minecraft"_**
 
 **This Software is available under the [GPL v3](http://www.gnu.org/licenses/gpl.html).**
 **Please Contribute Freely.**
