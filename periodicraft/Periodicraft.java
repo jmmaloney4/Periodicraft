@@ -48,7 +48,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class Periodicraft {
 	// Ore Generator
-	public static PeriodicraftWorldGenerator WGen;
+	public static PeriodicraftWorldGenerator WGen = new PeriodicraftWorldGenerator();
 
 	public static Random random = new Random();
 
@@ -212,10 +212,10 @@ public class Periodicraft {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabSpace",
 				"en_US", "Space Travel");
 
-		WGen = new PeriodicraftWorldGenerator();
+		
 		GameRegistry.registerWorldGenerator(WGen);
 		GameRegistry.addShapelessRecipe(new ItemStack(Block.cobblestone),
-				Block.sand, Block.gravel, Block.dirt);
+				Block.sand, Block.gravel, Block.dirt, Block.dirt);
 
 		BlockCopperOre.addSmeltingRecipe(ItemCopperIngot, 2.1F);
 		BlockPlatinumOre.addSmeltingRecipe(ItemPlatinumIngot, 5.1F);
@@ -266,7 +266,7 @@ public class Periodicraft {
 		MinecraftForge.setBlockHarvestLevel(block, "pickaxe", HarvestLevel);
 		LanguageRegistry.addName(block, UnlocalizedName);
 		GameRegistry.registerBlock(block, UnlocalizedName);
-		block.addToSurfaceGen(rarity);
+		block.addToSurfaceGen(rarity, block);
 		block.setDropAndCount(block.blockID, 1);
 		return block;
 	}
