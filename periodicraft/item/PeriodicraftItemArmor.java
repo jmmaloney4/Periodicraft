@@ -42,7 +42,7 @@ public class PeriodicraftItemArmor extends ItemArmor {
 		// TODO Auto-generated constructor stub
 	}
 
-	public EnumArmorMaterial addArmorType(String name, int Durabiblity,
+	public static EnumArmorMaterial addArmorType(String name, int Durabiblity,
 			int[] reductionAmounts, int Enchantability) {
 		EnumArmorMaterial material = EnumHelper.addArmorMaterial(name,
 				Durabiblity, reductionAmounts, Enchantability);

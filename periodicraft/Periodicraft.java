@@ -54,7 +54,21 @@ public class Periodicraft {
 
 	protected static final int LightValue = 0;
 	protected static final int LightOpacity = 0;
+	
+	// Creative Tabs
 
+	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(Item.pickaxeDiamond, 1, 0);
+		}
+	};
+
+	public static CreativeTabs tabMaterials = new CreativeTabs("tabMaterials") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(Item.pickaxeDiamond, 1, 0);
+		}
+	};
+	
 	// ingot
 	public static ItemIngot ItemCopperIngot = Periodicraft.CreateItemIngot(
 			"Copper Ingot", Periodicraft.tabMaterials);
@@ -154,20 +168,6 @@ public class Periodicraft {
 	public static BlockOre BlockBerylliumOre = Periodicraft.CreateOreBlock(
 			"Beryllium Ore", 6.4F, 5.3F, 3, LightValue, LightOpacity, 0,
 			EnumBlockRarity.RARE);
-
-	// Creative Tabs
-
-	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
-
-	public static CreativeTabs tabMaterials = new CreativeTabs("tabMaterials") {
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Item.pickaxeDiamond, 1, 0);
-		}
-	};
 
 	// The instance of your mod that Forge uses.
 	@Instance("Periodicraft")
