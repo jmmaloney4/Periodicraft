@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import mods.periodicraft.World.EnumBlockRarity;
 import mods.periodicraft.World.PeriodicraftWorldGenerator;
 import mods.periodicraft.block.BlockOre;
+import mods.periodicraft.block.BlockSimple;
 import mods.periodicraft.item.ItemDust;
 import mods.periodicraft.item.ItemIngot;
 import net.minecraft.block.Block;
@@ -55,49 +56,49 @@ public class Periodicraft {
 	protected static final int LightOpacity = 0;
 
 	// ingot
-	public static ItemIngot ItemCopperIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemCopperIngot = Periodicraft.CreateItemIngot(
 			"Copper Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemBronzeIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemBronzeIngot = Periodicraft.CreateItemIngot(
 			"Bronze Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemOsmiumIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemOsmiumIngot = Periodicraft.CreateItemIngot(
 			"Osmium Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemPlatinumIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemPlatinumIngot = Periodicraft.CreateItemIngot(
 			"Platinum Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemTungstenIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemTungstenIngot = Periodicraft.CreateItemIngot(
 			"Tungsten Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemTinIngot = new ItemIngot(ID.id(), "Tin Ingot",
-			Periodicraft.tabMaterials);
+	public static ItemIngot ItemTinIngot = Periodicraft.CreateItemIngot(
+			"Tin Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemSilverIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemSilverIngot = Periodicraft.CreateItemIngot(
 			"Silver Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemNeodymiumIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemNeodymiumIngot = Periodicraft.CreateItemIngot(
 			"Neodymium Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemNickelIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemNickelIngot = Periodicraft.CreateItemIngot(
 			"Nickel Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemMagnesiumIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemMagnesiumIngot = Periodicraft.CreateItemIngot(
 			"Magnesium Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemBoronIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemBoronIngot = Periodicraft.CreateItemIngot(
 			"Boron Ingot", Periodicraft.tabMaterials);
 
-	public static ItemIngot ItemBerylliumIngot = new ItemIngot(ID.id(),
+	public static ItemIngot ItemBerylliumIngot = Periodicraft.CreateItemIngot(
 			"Beryllium Ingot", Periodicraft.tabMaterials);
 	// dust
-	public static ItemDust ItemCarbonDust = new ItemDust(ID.id(),
+	public static ItemDust ItemCarbonDust = Periodicraft.CreateItemDust(
 			"Carbon Dust", Periodicraft.tabMaterials);
 
-	public static ItemDust ItemZincDust = new ItemDust(ID.id(), "Zinc Dust",
-			Periodicraft.tabMaterials);
+	public static ItemDust ItemZincDust = Periodicraft.CreateItemDust(
+			"Zinc Dust", Periodicraft.tabMaterials);
 
-	public static ItemDust ItemMagnesiumDust = new ItemDust(ID.id(),
+	public static ItemDust ItemMagnesiumDust = Periodicraft.CreateItemDust(
 			"Magnesium Dust", Periodicraft.tabMaterials);
 
 	// ore
@@ -183,7 +184,6 @@ public class Periodicraft {
 		FMLLog.log(
 				Level.INFO,
 				"=======================================================Pre-Initalizing Periodicraft=======================================================");
-
 	}
 
 	@EventHandler
@@ -271,10 +271,15 @@ public class Periodicraft {
 		return block;
 	}
 
-	public static PeriodicraftBlock CreateSimpleBlock(Material par2Material,
-			String UnlocalizedName) {
-		return null;
-
+	public static BlockSimple CreateSimpleBlock(Material par2Material,
+			CreativeTabs CreativeTab, String UnlocalizedName, float Hardness,
+			float Resistance, float LightValue, int LightOpacity) {
+		BlockSimple block = new BlockSimple(ID.id(), par2Material);
+		block.setUnlocalizedName(UnlocalizedName).setHardness(Hardness)
+				.setResistance(Resistance).setCreativeTab(CreativeTab)
+				.setLightValue(LightValue).setLightOpacity(LightOpacity)
+				.setTextureName("periodicraft:" + UnlocalizedName);
+		return block;
 	}
 
 	public static ItemIngot CreateItemIngot(String UnlocalizedName,
@@ -283,4 +288,12 @@ public class Periodicraft {
 		ingot.setTextureName("periodicraft:" + UnlocalizedName);
 		return ingot;
 	}
+
+	public static ItemDust CreateItemDust(String UnlocalizedName,
+			CreativeTabs CreativeTab) {
+		ItemDust dust = new ItemDust(ID.id(), UnlocalizedName, CreativeTab);
+		dust.setTextureName("periodicraft:" + UnlocalizedName);
+		return dust;
+	}
+
 }
