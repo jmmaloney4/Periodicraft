@@ -9,9 +9,11 @@ import mods.periodicraft.block.BlockOre;
 import mods.periodicraft.block.BlockSimple;
 import mods.periodicraft.item.ItemDust;
 import mods.periodicraft.item.ItemIngot;
+import mods.periodicraft.item.PeriodicraftItemArmor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,7 +56,7 @@ public class Periodicraft {
 
 	protected static final int LightValue = 0;
 	protected static final int LightOpacity = 0;
-	
+
 	// Creative Tabs
 
 	public static CreativeTabs tabBlocks = new CreativeTabs("tabBlocks") {
@@ -68,7 +70,13 @@ public class Periodicraft {
 			return new ItemStack(Item.pickaxeDiamond, 1, 0);
 		}
 	};
-	
+
+	public static CreativeTabs tabArmor = new CreativeTabs("tabArmor") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(Item.pickaxeDiamond, 1, 0);
+		}
+	};
+
 	// ingot
 	public static ItemIngot ItemCopperIngot = Periodicraft.CreateItemIngot(
 			"Copper Ingot", Periodicraft.tabMaterials);
@@ -126,7 +134,7 @@ public class Periodicraft {
 
 	public static BlockOre BlockOsmiumOre = Periodicraft.CreateOreBlock(
 
-	"Osmium Ore", 8.7F, 5.4F, 4, LightValue, LightOpacity, 0,
+			"Osmium Ore", 8.7F, 5.4F, 4, LightValue, LightOpacity, 0,
 			EnumBlockRarity.UNCOMMON);
 
 	public static BlockOre BlockZincOre = Periodicraft.CreateOreBlock(
@@ -212,7 +220,6 @@ public class Periodicraft {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabSpace",
 				"en_US", "Space Travel");
 
-		
 		GameRegistry.registerWorldGenerator(WGen);
 		GameRegistry.addShapelessRecipe(new ItemStack(Block.cobblestone),
 				Block.sand, Block.gravel, Block.dirt, Block.dirt);
@@ -296,4 +303,13 @@ public class Periodicraft {
 		return dust;
 	}
 
+	public static PeriodicraftItemArmor CreateArmor(String UnlocalizedName,
+			EnumArmorMaterial Material, int armorType, int RenderIndex) {
+		PeriodicraftItemArmor armor = new PeriodicraftItemArmor(ID.id(),
+				Material, armorType, RenderIndex);
+		armor.setTextureName("periodicraft:" + UnlocalizedName)
+				.setUnlocalizedName(UnlocalizedName).setMaxStackSize(1)
+				.setCreativeTab(Periodicraft.tabArmor);
+		return armor;
+	}
 }
