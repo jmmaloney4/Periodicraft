@@ -14,3 +14,5 @@ Periodicraft Minecraft Mod
 ***
 
 **If you would like to contribute, you can do so by forking our repository, and then submitting a pull request. We will then review your changes and merge the fork.**
+
+We are currently working on version Beta 1.0.0. This will contain most elements, some armor, tools, and some other cool stuff. This will be Minecraft 1.6.4 and Minecraft Forge 9.11.1.953 compatable.
