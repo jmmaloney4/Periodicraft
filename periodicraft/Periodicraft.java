@@ -10,10 +10,13 @@ import mods.periodicraft.block.BlockSimple;
 import mods.periodicraft.item.ItemDust;
 import mods.periodicraft.item.ItemIngot;
 import mods.periodicraft.item.PeriodicraftItemArmor;
+import mods.periodicraft.item.PeriodicraftItemPickaxe;
+import mods.periodicraft.item.PeriodicraftItemTool;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -72,6 +75,12 @@ public class Periodicraft {
 	};
 
 	public static CreativeTabs tabArmor = new CreativeTabs("tabArmor") {
+		public ItemStack getIconItemStack() {
+			return new ItemStack(Item.pickaxeDiamond, 1, 0);
+		}
+	};
+
+	public static CreativeTabs tabTools = new CreativeTabs("tabTools") {
 		public ItemStack getIconItemStack() {
 			return new ItemStack(Item.pickaxeDiamond, 1, 0);
 		}
@@ -194,6 +203,14 @@ public class Periodicraft {
 	public static PeriodicraftItemArmor BerrylliumArmorBoots = Periodicraft
 			.CreateArmor("Berryllium Boots", BERRYLLIUM_ARMOR, 2, 3);
 
+	// Tools
+
+	public static final EnumToolMaterial TUNGSTEN = PeriodicraftItemTool
+			.addToolType("Tungsten", 1750, 12, 4, 8.5F, 4.0F);
+
+	public static PeriodicraftItemPickaxe TungstenPickaxe = Periodicraft
+			.CreatePickaxe("Tungsten Pickaxe", TUNGSTEN);
+
 	// The instance of your mod that Forge uses.
 	@Instance("Periodicraft")
 	public static Periodicraft instance;
@@ -255,7 +272,7 @@ public class Periodicraft {
 				Periodicraft.ItemMagnesiumIngot),
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust,
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust);
-		BlockBoronOre.setCreativeTab(Periodicraft.tabBlocks);
+
 	}
 
 	@EventHandler
@@ -288,7 +305,6 @@ public class Periodicraft {
 				.setTextureName("periodicraft:" + UnlocalizedName)
 				.setLightOpacity(LightOpacity);
 		MinecraftForge.setBlockHarvestLevel(block, "pickaxe", HarvestLevel);
-		LanguageRegistry.addName(block, UnlocalizedName);
 		GameRegistry.registerBlock(block, UnlocalizedName);
 		block.addToSurfaceGen(rarity, block);
 		block.setDropAndCount(block.blockID, 1);
@@ -328,5 +344,27 @@ public class Periodicraft {
 				.setUnlocalizedName(UnlocalizedName).setMaxStackSize(1)
 				.setCreativeTab(Periodicraft.tabArmor);
 		return armor;
+	}
+
+	public static PeriodicraftItemPickaxe CreatePickaxe(String UnlocalizedName,
+			EnumToolMaterial Material) {
+		PeriodicraftItemPickaxe pick = new PeriodicraftItemPickaxe(ID.id(),
+				Material);
+		pick.setUnlocalizedName(UnlocalizedName).setCreativeTab(tabTools)
+				.setTextureName(
+						"periodicraft:" + UnlocalizedName);
+		return pick;
+	}
+
+	public static void name(PeriodicraftBlock block) {
+		LanguageRegistry.addName(block, block.UnlocalizedName);
+	}
+
+	public static void name(PeriodicraftItem item) {
+		LanguageRegistry.addName(item, item.UnlocalizedName);
+	}
+
+	public static void name(Item item, String name) {
+		LanguageRegistry.addName(item, name);
 	}
 }
