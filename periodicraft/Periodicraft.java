@@ -174,8 +174,25 @@ public class Periodicraft {
 			EnumBlockRarity.SUBTLE);
 
 	public static BlockOre BlockBerylliumOre = Periodicraft.CreateOreBlock(
-			"Beryllium Ore", 6.4F, 5.3F, 3, LightValue, LightOpacity, 0,
+			"Beryllium Ore", 6.4F, 5.3F, 4, LightValue, LightOpacity, 0,
 			EnumBlockRarity.RARE);
+
+	// ARMOR
+
+	public static final EnumArmorMaterial BERRYLLIUM_ARMOR = PeriodicraftItemArmor
+			.addArmorType("Berryllium", 38, new int[] { 4, 9, 7, 3 }, 12);
+
+	public static PeriodicraftItemArmor BerrylliumArmorHelmet = Periodicraft
+			.CreateArmor("Berryllium Helmet", BERRYLLIUM_ARMOR, 2, 0);
+
+	public static PeriodicraftItemArmor BerrylliumArmorChest = Periodicraft
+			.CreateArmor("Berryllium Chestplate", BERRYLLIUM_ARMOR, 2, 1);
+
+	public static PeriodicraftItemArmor BerrylliumArmorLegs = Periodicraft
+			.CreateArmor("Berryllium Leggings", BERRYLLIUM_ARMOR, 2, 2);
+
+	public static PeriodicraftItemArmor BerrylliumArmorBoots = Periodicraft
+			.CreateArmor("Berryllium Boots", BERRYLLIUM_ARMOR, 2, 3);
 
 	// The instance of your mod that Forge uses.
 	@Instance("Periodicraft")
