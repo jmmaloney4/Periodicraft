@@ -17,7 +17,7 @@ fi
 
 echo $installfolder
 
-curl https://github.com/Periodicraft-Dev/Periodicraft-Minecraft-Mod/archive/master.tar.gz > ./install/repo.tar.gz
+curl https://github.com/Periodicraft-Dev/Periodicraft-Minecraft-Mod/archive/master.zip > ./install/repo.zip
 
 curl http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.4-9.11.1.953/forge-1.6.4-9.11.1.953-installer.jar > ./installer.jar
 
@@ -36,12 +36,12 @@ cd ./forge/
 ./install.sh
 cd ../
 
-tar -xf ./install/repo.tar.gz
+unzip ./install/repo.zip
 mkdir ./forge/mcp/src/minecraft/mods/
 mv ./periodicraft/ ./forge/mcp/src/minecraft/mods
 
-chmod +x ./forge/reobfuscate.sh
-chmod +x ./forge/recompile.sh
+chmod +x ./forge/mcp/reobfuscate.sh
+chmod +x ./forge/mcp/recompile.sh
 
 ./forge/mcp/reobfuscate.sh
 ./forge/mcp/recompile.sh
@@ -50,5 +50,4 @@ mkdir $installfolder/mods
 
 mv ./forge/reobf/mods $installfolder/mods
 
-# USE TAR tar -xf ./FILE.tar.xz
 
