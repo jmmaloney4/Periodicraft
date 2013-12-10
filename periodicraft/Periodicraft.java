@@ -125,6 +125,9 @@ public class Periodicraft {
 
 	public static ItemIngot ItemBerylliumIngot = Periodicraft.CreateItemIngot(
 			"Beryllium Ingot", Periodicraft.tabMaterials);
+
+	public static ItemIngot ItemLithiumIngot = Periodicraft.CreateItemIngot(
+			"Lithium Ingot", Periodicraft.tabMaterials);
 	// dust
 	public static ItemDust ItemCarbonDust = Periodicraft.CreateItemDust(
 			"Carbon Dust", Periodicraft.tabMaterials);
@@ -188,6 +191,10 @@ public class Periodicraft {
 	public static BlockOre BlockBerylliumOre = Periodicraft.CreateOreBlock(
 			"Beryllium Ore", 6.4F, 5.3F, 4, LightValue, LightOpacity, 0,
 			EnumBlockRarity.RARE);
+
+	public static BlockOre BlockLithiumOre = Periodicraft.CreateOreBlock(
+			"LithiumOre", 4.6F, 4.3F, 2, LightValue, LightOpacity, 0,
+			EnumBlockRarity.SUBTLE);
 
 	// ARMOR
 
@@ -271,6 +278,8 @@ public class Periodicraft {
 		BlockNickelOre.addSmeltingRecipe(ItemNickelIngot, 2.1F);
 		BlockBoronOre.addSmeltingRecipe(ItemBoronIngot, 2.1F);
 		BlockBerylliumOre.addSmeltingRecipe(ItemBerylliumIngot, 2.1F);
+		BlockLithiumOre.addSmeltingRecipe(ItemLithiumIngot, 3.1F);
+
 		GameRegistry.addShapelessRecipe(new ItemStack(
 				Periodicraft.ItemMagnesiumIngot),
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust,
@@ -371,7 +380,7 @@ public class Periodicraft {
 		LanguageRegistry.addName(item, item.UnlocalizedName);
 	}
 
-	public static void name(Item item, String name) {
-		LanguageRegistry.addName(item, name);
+	public static void name(Object obj, String name) {
+		LanguageRegistry.addName(obj, name);
 	}
 }
