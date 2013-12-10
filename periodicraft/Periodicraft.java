@@ -87,6 +87,9 @@ public class Periodicraft {
 	};
 
 	// ingot
+	public static ItemIngot ItemSteelIngot = Periodicraft.CreateItemIngot(
+			"Steel Ingot", Periodicraft.tabMaterials);
+
 	public static ItemIngot ItemCopperIngot = Periodicraft.CreateItemIngot(
 			"Copper Ingot", Periodicraft.tabMaterials);
 
@@ -272,6 +275,10 @@ public class Periodicraft {
 				Periodicraft.ItemMagnesiumIngot),
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust,
 				Periodicraft.ItemMagnesiumDust, Periodicraft.ItemMagnesiumDust);
+
+		GameRegistry.addShapelessRecipe(new ItemStack(
+				Periodicraft.ItemSteelIngot), Periodicraft.ItemCarbonDust,
+				Item.ingotIron);
 
 	}
 
