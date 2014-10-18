@@ -1,3 +1,7 @@
 tile.CopperOre.name=Copper Ore
 item.CopperIngot.name=Copper Ingot
 item.CopperPickaxe.name=Copper Pickaxe
+item.CopperSpade.name=Copper Spade
+item.CopperSword.name=Copper Sword
+item.CopperAxe.name=Copper Axe
+item.CopperHoe.name=Copper Hoe

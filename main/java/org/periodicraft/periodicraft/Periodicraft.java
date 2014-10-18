@@ -2,6 +2,7 @@ package org.periodicraft.periodicraft;
 
 import org.periodicraft.periodicraft.block.PeriodicraftOre;
 import org.periodicraft.periodicraft.item.PeriodicraftAxe;
+import org.periodicraft.periodicraft.item.PeriodicraftHoe;
 import org.periodicraft.periodicraft.item.PeriodicraftIngot;
 import org.periodicraft.periodicraft.item.PeriodicraftPickaxe;
 import org.periodicraft.periodicraft.item.PeriodicraftSpade;
@@ -64,22 +65,19 @@ public class Periodicraft {
     public static Item ItemCopperSword;
     public static Item ItemCopperSpade;
     public static Item ItemCopperAxe;
+    public static Item ItemCopperHoe;
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
     	ToolMaterialCopper = EnumHelper.addToolMaterial("Copper", 2, 175, 3.8F, 1.6F, 10);
     	
-    	BlockCopperOre = new PeriodicraftOre(Material.rock, 4.0F, 2.2F, Block.soundTypeStone, "CopperOre", tabBlocks, 1);
     	ItemCopperIngot = new PeriodicraftIngot("CopperIngot", tabMaterials);
-    	ItemCopperPickaxe = new PeriodicraftPickaxe(ToolMaterialCopper, "CopperPickaxe", tabTools);
-    	ItemCopperSword = new PeriodicraftSword(ToolMaterialCopper, "CopperSword", tabWeapons);
-    	ItemCopperSpade = new PeriodicraftSpade(ToolMaterialCopper, "CopperSpade", tabTools);
-    	ItemCopperAxe = new PeriodicraftAxe(ToolMaterialCopper, "CopperAxe", tabTools);
-    	
-    	GameRegistry.addSmelting(Periodicraft.BlockCopperOre, new ItemStack(Periodicraft.ItemCopperIngot), 2.6F);
-    	GameRegistry.addShapedRecipe(new ItemStack(ItemCopperPickaxe), "xxx", " i ", " i ", 'x', ItemCopperIngot, 'i', Items.stick);
-    	GameRegistry.addShapedRecipe(new ItemStack(ItemCopperSword), " x ", " x ", " i ", 'x', ItemCopperIngot, 'i', Items.stick);
-    	GameRegistry.addShapedRecipe(new ItemStack(ItemCopperSword), " x ", " i ", " i ", 'x', ItemCopperIngot, 'i', Items.stick);
+    	BlockCopperOre = new PeriodicraftOre(Material.rock, 4.0F, 2.2F, Block.soundTypeStone, "CopperOre", tabBlocks, 1, ItemCopperIngot, 2.6F);
+    	ItemCopperPickaxe = new PeriodicraftPickaxe(ToolMaterialCopper, "CopperPickaxe", tabTools, ItemCopperIngot);
+    	ItemCopperSword = new PeriodicraftSword(ToolMaterialCopper, "CopperSword", tabWeapons, ItemCopperIngot);
+    	ItemCopperSpade = new PeriodicraftSpade(ToolMaterialCopper, "CopperSpade", tabTools, ItemCopperIngot);
+    	ItemCopperAxe = new PeriodicraftAxe(ToolMaterialCopper, "CopperAxe", tabTools, ItemCopperIngot);
+    	ItemCopperHoe = new PeriodicraftHoe(ToolMaterialCopper, "CopperHoe", tabTools, ItemCopperIngot);
     }
   
 }
