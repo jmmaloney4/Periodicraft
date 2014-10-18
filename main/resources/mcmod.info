@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Periodicraft",
+  "name": "Periodicraft",
+  "description": "Elemental Minecraft",
+  "version": "",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Charles Maloney", "Jack Maloney"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
