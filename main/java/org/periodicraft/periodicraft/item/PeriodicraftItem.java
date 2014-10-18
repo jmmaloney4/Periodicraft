@@ -12,7 +12,7 @@ public class PeriodicraftItem extends Item {
 		PeriodicraftItem.InitializeItem(this, name, tab);
 	}
 	
-	static void InitializeItem(Item i, String name, CreativeTabs tab) {
+	public static void InitializeItem(Item i, String name, CreativeTabs tab) {
 		i.setCreativeTab(tab);
 		i.setUnlocalizedName(name);
 		i.setTextureName(Periodicraft.MODID + ":" + name);
