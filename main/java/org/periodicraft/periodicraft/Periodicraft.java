@@ -1,6 +1,7 @@
 package org.periodicraft.periodicraft;
 
 import org.periodicraft.periodicraft.block.PeriodicraftOre;
+import org.periodicraft.periodicraft.item.PeriodicraftAxe;
 import org.periodicraft.periodicraft.item.PeriodicraftIngot;
 import org.periodicraft.periodicraft.item.PeriodicraftPickaxe;
 import org.periodicraft.periodicraft.item.PeriodicraftSpade;
@@ -62,6 +63,7 @@ public class Periodicraft {
     public static Item ItemCopperPickaxe;
     public static Item ItemCopperSword;
     public static Item ItemCopperSpade;
+    public static Item ItemCopperAxe;
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
@@ -72,6 +74,7 @@ public class Periodicraft {
     	ItemCopperPickaxe = new PeriodicraftPickaxe(ToolMaterialCopper, "CopperPickaxe", tabTools);
     	ItemCopperSword = new PeriodicraftSword(ToolMaterialCopper, "CopperSword", tabWeapons);
     	ItemCopperSpade = new PeriodicraftSpade(ToolMaterialCopper, "CopperSpade", tabTools);
+    	ItemCopperAxe = new PeriodicraftAxe(ToolMaterialCopper, "CopperAxe", tabTools);
     	
     	GameRegistry.addSmelting(Periodicraft.BlockCopperOre, new ItemStack(Periodicraft.ItemCopperIngot), 2.6F);
     	GameRegistry.addShapedRecipe(new ItemStack(ItemCopperPickaxe), "xxx", " i ", " i ", 'x', ItemCopperIngot, 'i', Items.stick);
