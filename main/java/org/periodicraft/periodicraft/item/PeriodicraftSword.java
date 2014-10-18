@@ -1,6 +1,4 @@
-package org.periodicraft.periodicraft;
-
-import org.periodicraft.periodicraft.item.PeriodicraftItem;
+package org.periodicraft.periodicraft.item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
