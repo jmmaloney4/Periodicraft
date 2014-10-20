@@ -9,6 +9,7 @@ import org.periodicraft.periodicraft.item.PeriodicraftItem;
 import org.periodicraft.periodicraft.item.PeriodicraftPickaxe;
 import org.periodicraft.periodicraft.item.PeriodicraftSpade;
 import org.periodicraft.periodicraft.item.PeriodicraftSword;
+import org.periodicraft.periodicraft.world.PeriodicraftGenerator;
 
 import scala.tools.nsc.doc.model.Public;
 import net.minecraft.block.Block;
@@ -68,6 +69,9 @@ public class Periodicraft {
         }
     };
     
+    // World Gen
+    public static PeriodicraftGenerator Generator;
+    
     //=========================================================================================================================================
     //COPPER
     public static Block BlockCopperOre;
@@ -123,6 +127,8 @@ public class Periodicraft {
     @EventHandler
     public void init(FMLInitializationEvent event) {
     	
+    	Periodicraft.Generator = new PeriodicraftGenerator();
+    	
     	//OBSIDIAN
     	ToolMaterialObsidian = EnumHelper.addToolMaterial("Obsidian", 2, 200, 14.0F, 4.7F, 25);
     	ArmorMaterialObsidian = EnumHelper.addArmorMaterial("Obsidian", 15, new int[] {2, 5, 4, 2}, 25);
@@ -147,6 +153,7 @@ public class Periodicraft {
     	ArmorMaterialCopper = EnumHelper.addArmorMaterial("Copper", 13, new int[] {2, 5, 5, 2}, 10);
     	ItemCopperIngot = new PeriodicraftIngot("CopperIngot", tabMaterials);
     	BlockCopperOre = new PeriodicraftOre(Material.rock, 4.0F, 2.2F, Block.soundTypeStone, "CopperOre", tabBlocks, 1, ItemCopperIngot, 2.6F);
+    	Generator.addBlockSurface(BlockCopperOre, 60, 7, 15);
     	ItemCopperPickaxe = new PeriodicraftPickaxe(ToolMaterialCopper, "CopperPickaxe", tabTools, ItemCopperIngot);
     	ItemCopperSword = new PeriodicraftSword(ToolMaterialCopper, "CopperSword", tabWeapons, ItemCopperIngot);
     	ItemCopperSpade = new PeriodicraftSpade(ToolMaterialCopper, "CopperSpade", tabTools, ItemCopperIngot);
