@@ -16,6 +16,7 @@ item.Emerald .name=Emerald
 item.Emerald .name=Emerald 
 item.Emerald .name=Emerald 
 item.ObsidianChunk.name=Obsidian Chunk
+item.BoneSword.name=Bone sword
 
 
 itemGroup.PeriodicraftBlocks=Periodicraft Blocks

@@ -153,7 +153,7 @@ public class Periodicraft {
     	ArmorMaterialCopper = EnumHelper.addArmorMaterial("Copper", 13, new int[] {2, 5, 5, 2}, 10);
     	ItemCopperIngot = new PeriodicraftIngot("CopperIngot", tabMaterials);
     	BlockCopperOre = new PeriodicraftOre(Material.rock, 4.0F, 2.2F, Block.soundTypeStone, "CopperOre", tabBlocks, 1, ItemCopperIngot, 2.6F);
-    	Generator.addBlockSurface(BlockCopperOre, 60, 7, 15);
+    	Generator.addBlockSurface(BlockCopperOre, 60, 7, 27);
     	ItemCopperPickaxe = new PeriodicraftPickaxe(ToolMaterialCopper, "CopperPickaxe", tabTools, ItemCopperIngot);
     	ItemCopperSword = new PeriodicraftSword(ToolMaterialCopper, "CopperSword", tabWeapons, ItemCopperIngot);
     	ItemCopperSpade = new PeriodicraftSpade(ToolMaterialCopper, "CopperSpade", tabTools, ItemCopperIngot);
@@ -168,7 +168,7 @@ public class Periodicraft {
     	GameRegistry.addSmelting(ItemEmeraldShard, new ItemStack(ItemEmeraldChunk), 4.0F);
     	GameRegistry.addShapedRecipe(new ItemStack(ItemObsidianShard), "xxx", "xxx", "xxx", 'x', Blocks.obsidian);
     	GameRegistry.addSmelting(ItemObsidianShard, new ItemStack(ItemObsidianChunk),  3.0F);
-    	GameReg
+    	//GameReg
     }
   
 }
