@@ -84,6 +84,11 @@ public class Periodicraft {
     public static Item ItemCopperLeggings;
     public static Item ItemCopperBoots;
     
+    //BONE
+    public static ToolMaterial ToolMaterialBone;
+    public static Item ItemBoneSword;
+    public static Item ItemBoneAxe;
+    
     //EMERALD
     public static ToolMaterial ToolMaterialEmerald;
     public static ArmorMaterial ArmorMaterialEmerald; 
@@ -126,6 +131,9 @@ public class Periodicraft {
     	ItemObsidianSword = new PeriodicraftSword(ToolMaterialObsidian, "ObsidianSword", tabWeapons, ItemObsidianChunk);
         ItemObsidianPickaxe = new PeriodicraftPickaxe(ToolMaterialObsidian, "ObsidainPickaxe", tabTools, ItemObsidianChunk);
         
+        //BONE
+        ToolMaterialBone = EnumHelper.addToolMaterial("Bone", 1, 100, 14.0F, 3.0F, 35);
+        ItemBoneSword = new PeriodicraftSword(ToolMaterialBone, "BoneSword", tabWeapons);
         
     	//EMERALD
     	ToolMaterialEmerald = EnumHelper.addToolMaterial("Emerald", 4, 2000, 10.0F, 4.4F, 15);
@@ -153,6 +161,7 @@ public class Periodicraft {
     	GameRegistry.addSmelting(ItemEmeraldShard, new ItemStack(ItemEmeraldChunk), 4.0F);
     	GameRegistry.addShapedRecipe(new ItemStack(ItemObsidianShard), "xxx", "xxx", "xxx", 'x', Blocks.obsidian);
     	GameRegistry.addSmelting(ItemObsidianShard, new ItemStack(ItemObsidianChunk),  3.0F);
+    	GameReg
     }
   
 }
