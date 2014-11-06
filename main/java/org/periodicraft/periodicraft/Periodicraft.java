@@ -145,7 +145,9 @@ public class Periodicraft {
     public static Item ItemObsidianBoots;
     public static Item ItemObsidianShard;
     
-    public static Item ItemGunTest;
+    public static Item ItemAKGun;
+    
+    
     
     //=========================================================================================================================================
     @EventHandler
@@ -183,7 +185,6 @@ public class Periodicraft {
         
         //Blazing BONE
         ToolMaterialBlazingBone = EnumHelper.addToolMaterial("BlazingBone", 2, 125, 14.0F, 4.9F, 35);
-        ItemBlazingBoneShard = new PeriodicraftItem("BlazingBoneShard", tabMaterials);
         ItemBlazingBoneSword = new PeriodicraftItem("BlazingBoneSword", tabWeapons);
         
         
@@ -214,8 +215,9 @@ public class Periodicraft {
     	GameRegistry.addSmelting(ItemEmeraldShard, new ItemStack(ItemEmeraldChunk), 4.0F);
     	GameRegistry.addShapedRecipe(new ItemStack(ItemObsidianShard), "xxx", "xxx", "xxx", 'x', Blocks.obsidian);
     	GameRegistry.addSmelting(ItemObsidianShard, new ItemStack(ItemObsidianChunk),  3.0F);
+    	//GameRegistry.addShapedRecipe(new ItemStack(ItemBlazingSword), "xix", "xix", " y ", 'x', ItemBlazeingIngot, 'i', Items.bone, 'y', Items.blaze_rod);
     	
-    	ItemGunTest = new PeriodicraftGun("Gun Test", tabWeapons, PeriodicraftEntityBullet.class);
+    	ItemAKGun = new PeriodicraftGun("AK-47", tabWeapons, PeriodicraftEntityBullet.class);
     }
   
 }

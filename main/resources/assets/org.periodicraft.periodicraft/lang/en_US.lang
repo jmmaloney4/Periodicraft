@@ -18,6 +18,7 @@ item.Emerald .name=Emerald
 item.ObsidianChunk.name=Obsidian Chunk
 item.BoneSword.name=Bone sword
 item.BlazeingBoneSword.name=Blazeing Bone Sword
+item.AK-47.name=AK-47
 
 
 itemGroup.PeriodicraftBlocks=Periodicraft Blocks
