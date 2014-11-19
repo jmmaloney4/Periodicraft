@@ -145,7 +145,20 @@ public class Periodicraft {
     public static Item ItemObsidianBoots;
     public static Item ItemObsidianShard;
     
+    //TITIANUM
+    public static ToolMaterial ToolMaterialTitianum;
+    public static ArmorMaterial ArmorMaterialTitianum;
+    public static Block BlockTitianumOre;
+    public static Item ItemTitanumIngot;
+    public static Item ItemTitianumPickaxe;
+    public static Item ItemTitianumHelmet; 
+    
+    //GUNS
     public static Item ItemAKGun;
+    public static Item ItemM4A1Gun;
+    public static Item ItemUZIGun;
+    public static Item ItemHunterRifelGun;
+    
     
     
     
@@ -187,7 +200,6 @@ public class Periodicraft {
         ToolMaterialBlazingBone = EnumHelper.addToolMaterial("BlazingBone", 2, 125, 14.0F, 4.9F, 35);
         ItemBlazingBoneSword = new PeriodicraftItem("BlazingBoneSword", tabWeapons);
         
-        
     	//EMERALD
     	ToolMaterialEmerald = EnumHelper.addToolMaterial("Emerald", 4, 2000, 10.0F, 4.4F, 15);
     	ArmorMaterialEmerald = EnumHelper.addArmorMaterial("Emerald", 37, new int[] {7, 10, 7, 4}, 15);
@@ -215,9 +227,18 @@ public class Periodicraft {
     	GameRegistry.addSmelting(ItemEmeraldShard, new ItemStack(ItemEmeraldChunk), 4.0F);
     	GameRegistry.addShapedRecipe(new ItemStack(ItemObsidianShard), "xxx", "xxx", "xxx", 'x', Blocks.obsidian);
     	GameRegistry.addSmelting(ItemObsidianShard, new ItemStack(ItemObsidianChunk),  3.0F);
-    	//GameRegistry.addShapedRecipe(new ItemStack(ItemBlazingSword), "xix", "xix", " y ", 'x', ItemBlazeingIngot, 'i', Items.bone, 'y', Items.blaze_rod);
+    	GameRegistry.addShapedRecipe(new ItemStack(ItemBlazingSword), "xix", "xix", " y ", 'x', ItemBlazeingIngot, 'i', Items.bone, 'y', Items.blaze_rod);
     	
     	ItemAKGun = new PeriodicraftGun("AK-47", tabWeapons, PeriodicraftEntityBullet.class);
+    	ItemM4A1Gun = new PeriodicraftGun("M4A1", tabWeapons, PeriodicraftEntityBullet.class);
+    	ItemUZIGun = new PeriodicraftGun("UZI", tabWeapons, PeriodicraftEntityBullet.class);
+    	ItemHunterRifelGun = new PeriodicraftGun("HunterRifel", tabWeapons, PeriodicraftEntityBullet.class);
+    	
+    	
+    	
+    	
+    	
+    	
     }
   
 }
