@@ -183,8 +183,8 @@ public class Periodicraft {
         //Blazing
         ToolMaterialBlazing = EnumHelper.addToolMaterial("Blazing", 2, 300, 5.3F, 3.0F, 27);
         ArmorMaterialBlazing = EnumHelper.addArmorMaterial("Blazing", 15, new int[] {3, 6, 5, 3}, 27);
-        // BlockBlazingOre = new PeriodicraftOre(Material.rock, 4.0F, );
-        // Generator.addBlockNether(BlockBlazingOre, 100, 5, 10);
+        BlockBlazingOre = new PeriodicraftOre(Material.rock, 4.0F, 2.9F, Block.soundTypeStone, "BlazeingOre", tabBlocks, 1, ItemBlazingIngot, 2.6F);
+        Generator.addBlockNether(BlockBlazingOre, 100, 5, 10);
         ItemBlazingIngot = new PeriodicraftIngot("BlazingIngot", tabMaterials);
         ItemBlazingSword = new PeriodicraftSword(ToolMaterialBlazing, "BlazingSword", tabArmor);
         ItemBlazingHelmet = new PeriodicraftArmor(ArmorMaterialBlazing, 0, "BlazingHelmet", tabArmor);
@@ -198,7 +198,7 @@ public class Periodicraft {
         
         //Blazing BONE
         ToolMaterialBlazingBone = EnumHelper.addToolMaterial("BlazingBone", 2, 125, 14.0F, 4.9F, 35);
-        ItemBlazingBoneSword = new PeriodicraftItem("BlazingBoneSword", tabWeapons);
+        ItemBlazingBoneSword = new PeriodicraftSword(ToolMaterialBlazingBone, "BlazingBoneSword", tabWeapons);
         
     	//EMERALD
     	ToolMaterialEmerald = EnumHelper.addToolMaterial("Emerald", 4, 2000, 10.0F, 4.4F, 15);
@@ -206,6 +206,12 @@ public class Periodicraft {
     	ItemEmeraldShard = new PeriodicraftItem("EmeraldShard", tabMaterials);
     	ItemEmeraldChunk = new PeriodicraftItem("EmeraldChunk", tabMaterials);
         ItemEmeraldSword = new PeriodicraftSword(ToolMaterialEmerald, "EmeraldSword", tabWeapons, ItemEmeraldChunk);
+        ItemEmeraldSpade = new PeriodicraftSpade(ToolMaterialEmerald, "EmeraldSpade", tabTools, ItemEmeraldChunk);
+        //ItemEmerald
+        ItemEmeraldHelmet = new PeriodicraftArmor(ArmorMaterialEmerald, 0, "EmeraldHelmet", tabArmor);
+        ItemEmeraldChestplate = new PeriodicraftArmor(ArmorMaterialEmerald, 1, "EmeraldChestplate", tabArmor);
+        ItemEmeraldLeggings = new PeriodicraftArmor(ArmorMaterialEmerald, 2, "EmeraldLeggings", tabArmor);
+        ItemEmeraldBoots = new PeriodicraftArmor(ArmorMaterialEmerald, 3, "EmeraldBoots", tabArmor);
         
     	// COPPER
     	ToolMaterialCopper = EnumHelper.addToolMaterial("Copper", 2, 175, 5.2F, 1.6F, 10);
@@ -227,7 +233,7 @@ public class Periodicraft {
     	GameRegistry.addSmelting(ItemEmeraldShard, new ItemStack(ItemEmeraldChunk), 4.0F);
     	GameRegistry.addShapedRecipe(new ItemStack(ItemObsidianShard), "xxx", "xxx", "xxx", 'x', Blocks.obsidian);
     	GameRegistry.addSmelting(ItemObsidianShard, new ItemStack(ItemObsidianChunk),  3.0F);
-    	GameRegistry.addShapedRecipe(new ItemStack(ItemBlazingSword), "xix", "xix", " y ", 'x', ItemBlazeingIngot, 'i', Items.bone, 'y', Items.blaze_rod);
+    	GameRegistry.addShapedRecipe(new ItemStack(ItemBlazingBoneSword), "xix", "xix", " y ", 'x', ItemBlazingIngot, 'i', Items.bone, 'y', Items.blaze_rod);
     	
     	ItemAKGun = new PeriodicraftGun("AK-47", tabWeapons, PeriodicraftEntityBullet.class);
     	ItemM4A1Gun = new PeriodicraftGun("M4A1", tabWeapons, PeriodicraftEntityBullet.class);
